@@ -1,79 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desert Whales</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/025c12b0bf.js" crossorigin="anonymous"></script></head>
-    <script src="https://kit.fontawesome.com/bb8f335e2d.js" crossorigin="anonymous"></script>
-<body>
-    <div class="modal">
-        <div class="form">
-            <div class="close">
-                <i class="fa-solid fa-circle-xmark"></i>
-            </div>
-            <img src="../assets/logo.png" alt="">
-            <h1>
-                Now its not live,<br>
-                coming soon
-            </h1>
-            <form action="">
-                <div class="inputbox">
-                    <input type="text" placeholder="Name">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desert Whales</title>
+        <link rel="stylesheet" href="index.css" />
+        <script
+            src="https://kit.fontawesome.com/025c12b0bf.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <script
+        src="https://kit.fontawesome.com/bb8f335e2d.js"
+        crossorigin="anonymous"
+    ></script>
+    <body>
+        <div class="modal hide" id="modal">
+            <div class="form">
+                <div class="close" id="modal_close">
+                    <i class="fa-solid fa-circle-xmark"></i>
                 </div>
-                <div class="inputbox">
-                    <input type="text" placeholder="Email">
+                <img src="./assets/logo.png" alt="" />
+                <form id="notify_form">
+                    <div class="inputbox">
+                        <input type="text" name="name" placeholder="Name" />
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="email" placeholder="Email" />
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <header>
+            <img src="../assets/logo.png" alt="" />
+        </header>
+        <section>
+            <div class="content">
+                <h1>
+                    DesertWhales ,<br />
+                    Coming Soon
+                </h1>
+                <p>We accelerate growth and fund blockchain technology</p>
+                <button id="modal_open">Notify When Its Live</button>
+            </div>
+            <div class="secimg">
+                <img src="./assets/ette-ai.svg" alt="" />
+            </div>
+        </section>
+        <footer>
+            <div class="box">
+                <i class="fa-solid fa-circle"></i>Desert Whales
+            </div>
+            <div class="icons">
+                <div class="icon">
+                    <i class="fab fa-twitter"></i>
                 </div>
-                <div class="submit">
-                    <input type="submit" value="Sumit">
+
+                <div class="icon">
+                    <i class="fab fa-medium-m"></i>
                 </div>
-            </form>
-        </div>
-    </div>
-    <header>
-        <img src="../assets/logo.png" alt="">
-    </header>
-    <section>
-        <div class="content">
-            <h1>
-                Now its not live,<br>
-            coming soon
-            </h1>
-            <p>
-                On the other hand, we denounce with righteous indignation and dislike men 
-            </p>
-            <button>
-                notify when its live
-            </button>
-        </div>
-        <div class="secimg">
-            <img src="../assets/ette-ai.svg" alt="">
-        </div>
-    </section>
-    <footer>
-        <div class="box">
-            <i class="fa-solid fa-circle"></i>Desert Whales
-        </div>
-        <div class="icons">
-            <div class="icon">
-                <i class="fab fa-twitter"></i>
-            </div>
-            
-            <div class="icon">
-                <i class="fab fa-medium-m"></i>
-            </div>
-            
 
-            <div class="icon">
-                <i class="fab fa-telegram-plane"></i>
+                <div class="icon">
+                    <i class="fab fa-telegram-plane"></i>
+                </div>
             </div>
-            
-
-        </div>
-    </footer>
-</body>
-
+        </footer>
+        <script src="./index.js" />
+    </body>
 </html>
+

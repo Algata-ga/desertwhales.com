@@ -1,24 +1,14 @@
-@font-face {
-    font-family: Alfont;
-    src: url(../assets/alfont_com_AlFont_com_Bahij_TheSansArabic-Bold-1.ttf);
-}
-@font-face {
-    font-family: arbfont;
-    src: url(../assets/alfont_com_ArbFONTS-Bahij_TheSansArabic-Plain.ttf);
-}
-@font-face {
-    font-family: dinarone;
-    src: url(../assets/ge-dinarone-bold_8.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Roboto&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+body {
     width: 100vw;
     height: 100vh;
-    background-image: url("../assets/bckgnd\ dsktp.jpg"); 
+    background-image: url("./assets/bckgnd\ dsktp.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -26,20 +16,22 @@ body{
     background-size: cover;
     background-position: center;
 }
-.modal{
+.modal {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.35);
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.hide {
     display: none;
 }
-.form{
-    width: 27rem;
-    height: 50vh;
+.form {
+    width: 40rem;
+    height: 40vh;
     background: rgba(66, 67, 66, 0.84);
     backdrop-filter: blur(11px);
     border-radius: 50px;
@@ -47,76 +39,77 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #C89D65 !important;
+    color: #c89d65 !important;
     position: relative;
 }
-.close{
+.close {
     position: absolute;
     top: 22px;
     right: 20px;
-    font-size: 1.5rem
+    font-size: 1.5rem;
 }
-.close:hover{
+.close:hover {
     color: #9b7543;
 }
-.form h1{
+.form h1 {
     text-align: center;
     margin-top: 50px;
 }
-.form img{
+.form img {
     height: 55px;
     position: absolute;
     top: 30px;
     margin-top: 10px;
 }
-form{
+form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
-form .inputbox,.submit{
+form .inputbox,
+.submit {
     margin-top: 30px;
 }
-input{
+input {
     outline: none;
 }
-form .inputbox input{
+
+form .inputbox input {
     width: 17rem;
-    border: 2px solid #C89D65;
+    border: 2px solid #c89d65;
     box-sizing: border-box;
     border-radius: 30px;
     background: transparent;
     height: 30px;
-    color: #C89D65 !important;
+    color: #c89d65 !important;
     text-align: center;
 }
-.submit input{
+.submit input {
     width: 8rem;
-    border: 2px solid #C89D65;
+    border: 2px solid #c89d65;
     box-sizing: border-box;
     border-radius: 30px;
     background: transparent;
     height: 30px;
-    color: #C89D65 !important;
+    color: #c89d65 !important;
     text-align: center;
 }
-::placeholder{
+::placeholder {
     text-align: center;
-    color: #C89D65 !important;
+    color: #c89d65 !important;
 }
-header{
+header {
     width: 100%;
     height: 80px;
 }
-header img{
+header img {
     height: 55px;
     margin-left: 20px;
     margin-top: 20px;
 }
 
-section{
+section {
     width: 100vw;
     height: calc(100vh - 160px);
     display: grid;
@@ -125,61 +118,66 @@ section{
     justify-items: center;
     align-items: center;
 }
-.content{
-    text-align: center;
+.content {
+    text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     color: white;
 }
-.content h1{
+.content h1 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
     font-size: 3rem;
     line-height: 70px;
 }
-.content p{
+.content p {
     width: 80%;
     margin-top: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
 }
-.secimg img{
+.secimg img {
     width: 50vw;
 }
-section button{
+section button {
     width: 17rem;
     padding: 10px;
     margin-top: 30px;
-    border: 2px solid #C89D65;
+    border: 2px solid #c89d65;
     box-sizing: border-box;
     border-radius: 30px;
     background: transparent;
-    color: #C89D65 !important;
+    color: #c89d65 !important;
     text-align: center;
 }
-footer{
+footer {
     width: 100vw;
     position: relative;
 }
-.box{
+.box {
     width: max-content;
     position: relative;
     transform: rotate(-90deg);
     margin-left: -40px;
     bottom: 20px;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
-.box .fa-solid{
+.box .fa-solid {
     margin: 10px;
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
-.icons{
+.icons {
     position: absolute;
     right: 20px;
     top: 20px;
-
 }
-.icon{
-    background: #B9B9B9;
+.icon {
+    background: #b9b9b9;
     width: 40px;
     height: 40px;
     font-size: 1.3rem;
@@ -190,22 +188,33 @@ footer{
     border-radius: 50%;
     margin-left: 20px;
 }
-.icon:hover{
+.icon:hover {
     background: #888686;
 }
 
-
 @media (max-width: 795px) {
-    section{
+    section {
         grid-template-columns: none;
-        grid-template-rows: 40vh 40vh; 
+        grid-template-rows: 40vh 40vh;
     }
-    .secimg img{
+    .secimg img {
         width: 100vw;
     }
-    .icon{
+    .icon {
         width: 30px;
         height: 30px;
         font-size: 1rem;
     }
+    .content {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0vw;
+    }
+    .form {
+        width: 20rem;
+        height: 50vh;
+    }
 }
+
