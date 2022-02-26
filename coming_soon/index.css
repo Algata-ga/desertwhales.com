@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Alfont;
+    src: url(../assets/alfont_com_AlFont_com_Bahij_TheSansArabic-Bold-1.ttf);
+}
+@font-face {
+    font-family: arbfont;
+    src: url(../assets/alfont_com_ArbFONTS-Bahij_TheSansArabic-Plain.ttf);
+}
+@font-face {
+    font-family: dinarone;
+    src: url(../assets/ge-dinarone-bold_8.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/bckgnd\ dsktp.jpg"); 
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    width: 100%;
+    height: 80px;
+}
+header img{
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+section{
+    width: 100vw;
+    height: calc(100vh - 160px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(25rem, 1fr));
+    position: relative;
+    justify-items: center;
+    align-items: center;
+}
+.content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.content h1{
+    font-size: 3rem;
+}
+.content p{
+    width: 80%;
+}
+.secimg{
+    
+}
+.secimg img{
+    width: 50vw;
+}
+
+
+@media (max-width: 768px) {
+    section{
+        grid-template-columns: none;
+        grid-template-rows: 40vh 40vh; 
+    }
+    .secimg img{
+        width: 100vw;
+    }
+}
