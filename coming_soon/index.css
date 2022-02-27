@@ -6,6 +6,7 @@
     padding: 0;
 }
 body {
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     background-image: url("./assets/bckgnd\ dsktp.jpg");
@@ -15,6 +16,28 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-position: center;
+}
+.arrow{
+    position: absolute;
+    width: 28rem;
+    height: 28rem;
+    z-index: -2;
+    border: 9px solid #383838;
+    box-sizing: border-box;
+    transform: rotate(-61.16deg);
+    top: -100px;
+    right: -180px;
+}
+.arrow-inner{
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+
+    background: #3a3939;
+    box-sizing: border-box;
+    transform: rotate(-90deg);
+    margin-top: 3rem;
+    margin-left: 3rem;
 }
 .modal {
     position: fixed;
@@ -102,16 +125,19 @@ form .inputbox input {
 header {
     width: 100%;
     height: 80px;
+    display: flex;
 }
 header img {
     height: 55px;
-    margin-left: 20px;
-    margin-top: 20px;
 }
 
 section {
     width: 100vw;
     height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;}
+.container{
+    width: 98%;
     display: grid;
     grid-template-columns: repeat(2, minmax(25rem, 1fr));
     position: relative;
@@ -123,7 +149,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-items: left;
+    align-items: center;
     color: white;
 }
 .content h1 {
@@ -134,14 +160,17 @@ section {
     line-height: 70px;
 }
 .content p {
-    width: 80%;
+    width: 77%;
     margin-top: 15px;
     font-family: Roboto;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: normal;
 }
 .secimg img {
-    width: 50vw;
+    width: 45vw;
+    min-height: 45vh;
+    z-index: -1;
 }
 section button {
     width: 17rem;
@@ -153,6 +182,10 @@ section button {
     background: transparent;
     color: #c89d65 !important;
     text-align: center;
+}
+section button:hover{
+    border: 2px solid #9b7543;
+    color: #9b7543 !important;
 }
 footer {
     width: 100vw;
@@ -173,8 +206,8 @@ footer {
 }
 .icons {
     position: absolute;
+    top: 10px;
     right: 20px;
-    top: 20px;
 }
 .icon {
     background: #b9b9b9;
@@ -191,14 +224,62 @@ footer {
 .icon:hover {
     background: #888686;
 }
+@media (max-width: 922px){
+    .content h1{
+        font-size: 2.5rem;
+        line-height: 60px;
+    }
+    .content p{
+        font-size: 1.1rem;
+        width: 70%;
+    }
+    .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+@media (min-width: 795px) {
+    header img{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+}
 
 @media (max-width: 795px) {
-    section {
+    .arrow{
+        position: absolute;
+        width: 23rem;
+        height: 23rem;
+        border: 9px solid #434343;
+        box-sizing: border-box;
+        transform: rotate(-61.16deg);
+        top: -100px;
+        right: -180px;
+    }
+    .arrow-inner{
+        position: absolute;
+        width: 25rem;
+        height: 25rem;
+    
+        background: #434343;
+        box-sizing: border-box;
+        transform: rotate(-90deg);
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
         grid-template-columns: none;
         grid-template-rows: 40vh 40vh;
     }
     .secimg img {
-        width: 100vw;
+        width: 65vw;
+        min-height: none;
     }
     .icon {
         width: 30px;
@@ -215,6 +296,16 @@ footer {
     .form {
         width: 20rem;
         height: 50vh;
+    }
+}
+@media (max-width: 576px) {
+    .content h1{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+    .secimg img {
+        width: 70vw;
+        min-height: none;
     }
 }
 
