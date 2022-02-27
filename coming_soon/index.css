@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Roboto&display=swap");
 
 @font-face {
-    font-family:"Bahij TheSansArabic-Black";
-    src: url("Bahij_TheSansArabic-Black.eot?") format("eot"),url("Bahij_TheSansArabic-Black.woff") format("woff"),url("Bahij_TheSansArabic-Black.ttf") format("truetype"),url("Bahij_TheSansArabic-Black.svg#BahijTheSansArabic-Black") format("svg");
+    font-family: 'Bahija';
+    src: url(./assets/alfont_com_AlFont_com_Bahij_TheSansArabic-Bold-1.ttf);
     font-weight:normal;
     font-style:normal;
 }
@@ -12,9 +12,6 @@
     padding: 0;
 }
 
-@font-face{
-    n
-}
 
 body {
     width: 100%;
@@ -74,7 +71,7 @@ body {
 }
 .form {
     width: 40rem;
-    height: 40vh;
+    height: 30rem;
     background: rgba(66, 67, 66, 0.84);
     backdrop-filter: blur(11px);
     border-radius: 50px;
@@ -124,8 +121,9 @@ form .inputbox input {
     box-sizing: border-box;
     border-radius: 30px;
     background: transparent;
-    height: 30px;
+    height: 35px;
     color: #c89d65 !important;
+    font-size: 1rem;
     text-align: center;
 }
 .submit input {
@@ -135,6 +133,7 @@ form .inputbox input {
     border-radius: 30px;
     background: transparent;
     height: 30px;
+    font-size: 1rem;
     color: #c89d65 !important;
     text-align: center;
 }
@@ -148,7 +147,7 @@ header {
     display: flex;
 }
 header img {
-    height: 125px;
+    height: 100px;
     padding-left:50px;
     padding-top:50px;
 }
@@ -172,33 +171,26 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-items: center;
     color: white;
     position: relative;
 }
 .content h1 {
-    font-family: 'Bahij TheSansArabic-Black';
+    font-family: Bahija,sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 4rem;
     line-height: 70px;
 }
 .content p {
-    width: 70%;
+    width: 100%;
     margin-top: 15px;
-    font-family: Roboto;
-    font-size: 1.5rem;
+    font-family: Bahija,sans-serif;
+    font-size: 2rem;
     font-style: normal;
     font-weight: normal;
 }
 .content span {
-    position: absolute;
-    left: -25px;
-    top: 30px;
-    width: 40px;
-    height: 6px;
-    background-color: #c89d65;
-    border-radius: 35px;
+    color: #c89d65;
 }
 .secimg img {
     width: 45vw;
@@ -208,13 +200,16 @@ section {
 section button {
     width: 17rem;
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 9rem;
     border: 2px solid #c89d65;
     box-sizing: border-box;
     border-radius: 30px;
     background: transparent;
+    font-size: 1.2rem;
     color: #c89d65 !important;
     text-align: center;
+    align-self: center;
+    font-family: Bahija,sans-serif;
 }
 section button:hover {
     border: 2px solid #9b7543;
@@ -263,21 +258,7 @@ footer {
 .icon:hover {
     background: #888686;
 }
-@media (max-width: 922px) {
-    .content h1 {
-        font-size: 2.5rem;
-        line-height: 60px;
-    }
-    .content p {
-        font-size: 1.1rem;
-        width: 70%;
-    }
-    .icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-}
+
 @media (min-width: 795px) {
     header img {
         margin-left: 20px;
@@ -293,21 +274,35 @@ footer {
         width: 24rem;
         height: 24rem;
     }
-    .content span {
-        display: none;
-    }
     header {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+    header img{
+        height: 65px;
+    }
+
     .container {
         grid-template-columns: none;
         grid-template-rows: 40vh 40vh;
     }
+    section button{
+        margin-top: 2rem;
+        font-size: .9rem;
+        width: 14rem;
+        padding: 5px;
+    }
     .secimg img {
         width: 65vw;
         min-height: none;
+    }
+    .content h1 {
+        font-size: 2rem;
+        line-height: 50px;
+    }
+    .content p{
+        font-size: 1.2rem;
     }
     .icon {
         width: 30px;
@@ -331,6 +326,10 @@ footer {
         font-size: 2rem;
         line-height: 50px;
     }
+    .content p{
+        font-size: 1rem;
+    }
+
     .secimg img {
         width: 70vw;
         min-height: none;
