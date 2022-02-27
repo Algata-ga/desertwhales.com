@@ -2,16 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Roboto&display=swap");
 
 @font-face {
-    font-family: 'Bahija';
+    font-family: "Bahija";
     src: url(./assets/alfont_com_AlFont_com_Bahij_TheSansArabic-Bold-1.ttf);
-    font-weight:normal;
-    font-style:normal;
+    font-weight: normal;
+    font-style: normal;
 }
 * {
     margin: 0;
     padding: 0;
 }
-
 
 body {
     width: 100%;
@@ -148,8 +147,8 @@ header {
 }
 header img {
     height: 100px;
-    padding-left:50px;
-    padding-top:50px;
+    padding-left: 50px;
+    padding-top: 50px;
 }
 
 section {
@@ -167,6 +166,7 @@ section {
     align-items: center;
 }
 .content {
+    margin-top: 7rem;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -175,7 +175,7 @@ section {
     position: relative;
 }
 .content h1 {
-    font-family: Bahija,sans-serif;
+    font-family: Bahija, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 4rem;
@@ -184,7 +184,7 @@ section {
 .content p {
     width: 100%;
     margin-top: 15px;
-    font-family: Bahija,sans-serif;
+    font-family: Bahija, sans-serif;
     font-size: 2rem;
     font-style: normal;
     font-weight: normal;
@@ -208,8 +208,8 @@ section button {
     font-size: 1.2rem;
     color: #c89d65 !important;
     text-align: center;
-    align-self: center;
-    font-family: Bahija,sans-serif;
+    /*align-self: center;*/
+    font-family: Bahija, sans-serif;
 }
 section button:hover {
     border: 2px solid #9b7543;
@@ -279,7 +279,7 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    header img{
+    header img {
         height: 65px;
     }
 
@@ -287,9 +287,9 @@ footer {
         grid-template-columns: none;
         grid-template-rows: 40vh 40vh;
     }
-    section button{
+    section button {
         margin-top: 2rem;
-        font-size: .9rem;
+        font-size: 0.9rem;
         width: 14rem;
         padding: 5px;
     }
@@ -301,7 +301,7 @@ footer {
         font-size: 2rem;
         line-height: 50px;
     }
-    .content p{
+    .content p {
         font-size: 1.2rem;
     }
     .icon {
@@ -326,7 +326,7 @@ footer {
         font-size: 2rem;
         line-height: 50px;
     }
-    .content p{
+    .content p {
         font-size: 1rem;
     }
 
