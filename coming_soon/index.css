@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Roboto&display=swap");
 
+@font-face {
+    font-family:"Bahij TheSansArabic-Black";
+    src: url("Bahij_TheSansArabic-Black.eot?") format("eot"),url("Bahij_TheSansArabic-Black.woff") format("woff"),url("Bahij_TheSansArabic-Black.ttf") format("truetype"),url("Bahij_TheSansArabic-Black.svg#BahijTheSansArabic-Black") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
 * {
     margin: 0;
     padding: 0;
+}
+
+@font-face{
+    n
 }
 
 body {
@@ -138,7 +148,9 @@ header {
     display: flex;
 }
 header img {
-    height: 55px;
+    height: 125px;
+    padding-left:50px;
+    padding-top:50px;
 }
 
 section {
@@ -165,23 +177,23 @@ section {
     position: relative;
 }
 .content h1 {
-    font-family: Poppins;
+    font-family: 'Bahij TheSansArabic-Black';
     font-style: normal;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 70px;
 }
 .content p {
-    width: 77%;
+    width: 70%;
     margin-top: 15px;
     font-family: Roboto;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: normal;
 }
 .content span {
     position: absolute;
-    left: -5px;
+    left: -25px;
     top: 30px;
     width: 40px;
     height: 6px;
