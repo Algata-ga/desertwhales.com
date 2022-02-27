@@ -4,12 +4,12 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
+
 body {
     width: 100%;
     height: 100vh;
-    background-image: url("./assets/bckgnd\ dsktp.jpg");
+    background: linear-gradient(264.27deg, #515251 -41.22%, #050404 223.16%);
     background-repeat: no-repeat;
     -webkit-background-size: 100% 100vh;
     -moz-background-size: 100% 100vh;
@@ -17,29 +17,37 @@ body {
     background-size: 100% 100vh;
     background-position: center;
 }
-.arrowbox{
+.arrowbox {
     position: absolute;
     right: 0;
     z-index: -5;
     width: 30rem;
     height: 30rem;
 }
-.arrow{
+.arrow {
     position: relative;
     z-index: -2;
     width: 100%;
     height: 100%;
-    background: #515251;
+    background: linear-gradient(264.27deg, #050404 -41.22%, #515251 223.16%);
+    width: 100%;
+    opacity: 60%;
     box-sizing: border-box;
     clip-path: polygon(100% 100%, 20% 40%, 51.73% 0.52%, 100% 0%);
     transition: all 1s ease-out;
 }
-.arrow-inner{
-	background: linear-gradient(264.27deg, #515251 -41.22%, #050404 223.16%);
-	width: 100%;
-	height: 100%;
-    clip-path: polygon(100% 81%, 41.41% 37.84%, 71.46% 0%, 54.59% 0%, 23.92% 39.38%, 99.79% 96.53%);
-    
+.arrow-inner {
+    background: linear-gradient(264.27deg, #515251 -41.22%, #050404 223.16%);
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+        100% 81%,
+        41.41% 37.84%,
+        71.46% 0%,
+        54.59% 0%,
+        23.92% 39.38%,
+        99.79% 96.53%
+    );
 }
 .modal {
     position: fixed;
@@ -137,8 +145,9 @@ section {
     width: 100%;
     height: calc(100vh - 160px);
     display: flex;
-    justify-content: center;}
-.container{
+    justify-content: center;
+}
+.container {
     width: 98%;
     display: grid;
     grid-template-columns: repeat(2, minmax(25rem, 1fr));
@@ -153,6 +162,7 @@ section {
     justify-content: left;
     align-items: center;
     color: white;
+    position: relative;
 }
 .content h1 {
     font-family: Poppins;
@@ -168,6 +178,15 @@ section {
     font-size: 1.2rem;
     font-style: normal;
     font-weight: normal;
+}
+.content span {
+    position: absolute;
+    left: -5px;
+    top: 30px;
+    width: 40px;
+    height: 6px;
+    background-color: #c89d65;
+    border-radius: 35px;
 }
 .secimg img {
     width: 45vw;
@@ -185,7 +204,7 @@ section button {
     color: #c89d65 !important;
     text-align: center;
 }
-section button:hover{
+section button:hover {
     border: 2px solid #9b7543;
     color: #9b7543 !important;
 }
@@ -223,15 +242,21 @@ footer {
     border-radius: 50%;
     margin-left: 20px;
 }
+.icons a {
+    text-decoration: none !important;
+}
+.icon i {
+    color: #5d5d5d;
+}
 .icon:hover {
     background: #888686;
 }
-@media (max-width: 922px){
-    .content h1{
+@media (max-width: 922px) {
+    .content h1 {
         font-size: 2.5rem;
         line-height: 60px;
     }
-    .content p{
+    .content p {
         font-size: 1.1rem;
         width: 70%;
     }
@@ -242,7 +267,7 @@ footer {
     }
 }
 @media (min-width: 795px) {
-    header img{
+    header img {
         margin-left: 20px;
         margin-top: 20px;
     }
@@ -256,7 +281,10 @@ footer {
         width: 24rem;
         height: 24rem;
     }
-    header{
+    .content span {
+        display: none;
+    }
+    header {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -287,7 +315,7 @@ footer {
     }
 }
 @media (max-width: 576px) {
-    .content h1{
+    .content h1 {
         font-size: 2rem;
         line-height: 50px;
     }
@@ -296,4 +324,3 @@ footer {
         min-height: none;
     }
 }
-
