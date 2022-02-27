@@ -4,44 +4,46 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 body {
-    overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url("./assets/bckgnd\ dsktp.jpg");
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 100% 100vh;
+    -moz-background-size: 100% 100vh;
+    -o-background-size: 100% 100vh;
+    background-size: 100% 100vh;
     background-position: center;
 }
-.arrow{
+.arrowbox{
     position: absolute;
-    width: 28rem;
-    height: 28rem;
+    right: 0;
+    z-index: -5;
+    width: 30rem;
+    height: 30rem;
+}
+.arrow{
+    position: relative;
     z-index: -2;
-    border: 9px solid #383838;
+    width: 100%;
+    height: 100%;
+    background: #515251;
     box-sizing: border-box;
-    transform: rotate(-61.16deg);
-    top: -100px;
-    right: -180px;
+    clip-path: polygon(100% 100%, 20% 40%, 51.73% 0.52%, 100% 0%);
+    transition: all 1s ease-out;
 }
 .arrow-inner{
-    position: absolute;
-    width: 25rem;
-    height: 25rem;
-
-    background: #3a3939;
-    box-sizing: border-box;
-    transform: rotate(-90deg);
-    margin-top: 3rem;
-    margin-left: 3rem;
+	background: linear-gradient(264.27deg, #515251 -41.22%, #050404 223.16%);
+	width: 100%;
+	height: 100%;
+    clip-path: polygon(100% 81%, 41.41% 37.84%, 71.46% 0%, 54.59% 0%, 23.92% 39.38%, 99.79% 96.53%);
+    
 }
 .modal {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.35);
     z-index: 2;
@@ -132,7 +134,7 @@ header img {
 }
 
 section {
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - 160px);
     display: flex;
     justify-content: center;}
@@ -188,7 +190,7 @@ section button:hover{
     color: #9b7543 !important;
 }
 footer {
-    width: 100vw;
+    width: 100%;
     position: relative;
 }
 .box {
@@ -247,26 +249,12 @@ footer {
 }
 
 @media (max-width: 795px) {
-    .arrow{
+    .arrowbox {
         position: absolute;
-        width: 23rem;
-        height: 23rem;
-        border: 9px solid #434343;
-        box-sizing: border-box;
-        transform: rotate(-61.16deg);
-        top: -100px;
-        right: -180px;
-    }
-    .arrow-inner{
-        position: absolute;
-        width: 25rem;
-        height: 25rem;
-    
-        background: #434343;
-        box-sizing: border-box;
-        transform: rotate(-90deg);
-        margin-top: 3rem;
-        margin-left: 3rem;
+        right: 0;
+        z-index: -5;
+        width: 24rem;
+        height: 24rem;
     }
     header{
         display: flex;
