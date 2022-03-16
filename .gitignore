@@ -1,3 +1,4 @@
-coming_soon/.parcel-cache/
-coming_soon/dist/
-coming_soon/site-desertwhales-cs.tar.gz
+node_modules
+dist/
+dist.tar.gz
+.parcel_cache/
