@@ -10,10 +10,9 @@
                     { "y": -12671671.123330014, "x": -20004297.151525836 },
                     { "y": 6930392.025135122, "x": 20026572.394749384 }
                 ],
-                "left": 0
-            }
+                "left": 0 }
         ],
-    "projection": { "type": "merc", "centralMeridian": 11.5 },
+    "projection": { "type": "aea", "centralMeridian": 10 },
     "width": 1000,
     "height": 666.66669,
     "paths": {
