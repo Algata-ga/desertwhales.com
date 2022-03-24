@@ -1,9 +1,12 @@
-import { Section1 } from "./sections";
+import {Navbar} from "./components";
+import { Section1,Partner } from "./sections";
 
 function App() {
     return (
         <>
+            <Navbar/>
             <Section1 />
+            <Partner/>
         </>
     );
 }
