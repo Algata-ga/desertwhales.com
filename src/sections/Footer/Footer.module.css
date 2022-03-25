@@ -1,0 +1,45 @@
+.footerbg{
+    width: 100%;
+    padding: 3rem 0;
+    background: #121212;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    justify-items: center;
+}
+.logo,.quicklink,.company,.social{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.logo img{
+    width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 992px) {
+    .footer{
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+
+    }
+    .logo img{
+        width: 50%;
+    }
+    .logo,.quicklink,.company,.social{
+        width: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .logo img{
+        width: 25%;
+    }
+    .footer{
+        grid-template-columns: repeat(1, minmax(1rem, 1fr));
+
+    }
+    .logo,.quicklink,.company,.social{
+        width: 80%;
+    }
+}

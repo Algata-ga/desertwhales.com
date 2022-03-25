@@ -1,7 +1,6 @@
 .section{
     width: 100%;
-    padding: 6rem 0;
-    background: #121212;
+    padding: 3rem 0;
     position: relative;
 }
 .contentbox{
@@ -10,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
     flex-direction: column;
     text-align: center;
     z-index: 2;
@@ -23,7 +22,7 @@
 .contentbox p{
     font-size: 1.5rem;
 }
-.circle1,.circle2{
+.circle1{
     position: absolute;
     width: 10rem;
     height: 10rem;
@@ -38,10 +37,8 @@
     top: 30px;
     left: 50px;
 }
-.circle2{
-    bottom: 30px;
-    right: 50px;
-}
+
+
 @media (max-width:992px) {
     .contentbox h1{
         font-size: 3.5rem;
