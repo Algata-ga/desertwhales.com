@@ -1,5 +1,5 @@
 import {Navbar} from "./components";
-import { Section1,Partner } from "./sections";
+import { Section1,Partner,Service,Cards } from "./sections";
 
 function App() {
     return (
@@ -7,6 +7,8 @@ function App() {
             <Navbar/>
             <Section1 />
             <Partner/>
+            <Service/>
+            <Cards/>
         </>
     );
 }

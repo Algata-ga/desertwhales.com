@@ -2,7 +2,7 @@
     width: 100%;
     height: 150px;
     position: relative;
-    background: red;
+    background: #121212;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@
 }
 .slide{
     height: 100%;
-    width: fit-content;
+    width: 33%;
     display: flex;
     align-items: center;
     justify-content: center;
