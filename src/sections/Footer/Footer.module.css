@@ -1,45 +1,83 @@
 .footerbg{
     width: 100%;
-    padding: 3rem 0;
+    padding: 2rem 0;
     background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer{
+    width: 90%;
+    height: auto;
     display: grid;
-    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    grid-template-areas: "img quick company social";
     justify-items: center;
+
+    color: white;
 }
 .logo,.quicklink,.company,.social{
-    width: 25%;
     display: flex;
+    flex-direction: column;
+    grid-area: 1fr;
+}
+.logo{
+    grid-area: img;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 20px;
+}
+.quicklink{
+    grid-area: quick;
+}
+.company{
+    grid-area: company;
+}
+.social{
+    grid-area: social;
 }
 .logo img{
-    width: 100%;
+    width: 80px;
     object-fit: contain;
 }
 
-@media (max-width: 992px) {
+.link{
+    border-radius: 50%;
+    font-size: 1.75rem;
+    margin: 7px;
+    padding: 2px;
+    color: rgba(255, 255, 255, 0.603);
+}
+.link:hover{
+    color: #ca9e66;
+}
+input{
+    height: 35px;
+    width: 70%;
+}
+.subscribe button{
+    padding: 0 10px;
+    border: none;
+    background: #ca9e66;
+    height: 35px;
+    width: 30%;
+}
+@media (max-width:992px) {
     .footer{
-    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+        grid-template-areas: "img quick company"
+                            "social social social" ;
+    }
 
-    }
-    .logo img{
-        width: 50%;
-    }
-    .logo,.quicklink,.company,.social{
-        width: 50%;
+    .social{
+        justify-content: center;
+        align-items: center;
     }
 }
-@media (max-width: 576px) {
-    .logo img{
-        width: 25%;
+@media (max-width:768px) {
+    .logo{
+        padding: 1rem 0;
     }
     .footer{
-        grid-template-columns: repeat(1, minmax(1rem, 1fr));
-
-    }
-    .logo,.quicklink,.company,.social{
-        width: 80%;
+        grid-template-areas: "img img " "quick company" "social social ";
+        justify-items: center;
     }
 }
