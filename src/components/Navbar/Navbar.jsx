@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Transition } from "react-transition-group";
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false);
+    const [nav, setNav] = useState(true);
     const defaultStyle = {
         transition: "all 1s ease-in-out",
         opacity: 1,
@@ -66,4 +66,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
