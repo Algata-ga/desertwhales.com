@@ -1,7 +1,7 @@
 .section{
     width: 100%;
     padding: 6rem 0;
-    background: #121212;
+    background: #000;
     position: relative;
 }
 .contentbox{
@@ -57,6 +57,10 @@
     .contentbox p{
         font-size: 1rem;
     }
+    .circle1,.circle2{ 
+        height: 8rem;
+        width: 8rem;
+    }
 }
 @media (max-width:576px) {
     .contentbox h1{
@@ -65,6 +69,10 @@
     .contentbox p{
         font-size: 1rem;
     }
+    .circle1,.circle2{ 
+        height: 7rem;
+        width: 7rem;
+    }
 }
 @media (max-width:400px) {
     .contentbox h1{
@@ -72,5 +80,9 @@
     }
     .contentbox p{
         font-size: 1rem;
+    }
+    .circle1,.circle2{ 
+        height: 6rem;
+        width: 6rem;
     }
 }

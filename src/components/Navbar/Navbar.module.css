@@ -48,13 +48,10 @@
         top: 100px;
         left: 0;
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
         height: calc(100vh - 100px);
-        z-index: 10;
-        background: red;
-
-        clip-path: circle(0px at 0 0);
-        -webkit-clip-path: circle(0px at 0 0);
+        background: #121212e5;
+        backdrop-filter: blur(2px);
         justify-content: center !important;
         align-items: center;
     }
@@ -66,17 +63,10 @@
         font-size: 2rem;
     }
     .open {
-        clip-path: circle(500px at 0 0);
-        -webkit-clip-path: circle(500px at 0 0);
-        transition: all 1s ease-in-out;
+        transition: all .5s ease-in-out;
     }
     .close {
         display: none;
-    }
-    .hamburger_menu{
-        clip-path: circle(500px at 0 0);
-        -webkit-clip-path: circle(500px at 0 0);
-
     }
 }
 

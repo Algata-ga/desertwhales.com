@@ -38,7 +38,7 @@ const Partner = () => {
         <section className={style.partner}>
 
             <Container>
-                <Swiper className={style.swiper + " " + "mySwiper"}
+                <Swiper className={style.swiper+ " " + "mySwiper"}
                     effect={"coverflow"}
                     grabCursor={true}
                     centeredSlides={true}

@@ -2,6 +2,7 @@
     width: 100%;
     padding: 3rem 0;
     position: relative;
+    background: white !important;
 }
 .contentbox{
     width: 100%;
@@ -54,6 +55,10 @@
     .contentbox p{
         font-size: 1rem;
     }
+    .circle1{ 
+        height: 8rem;
+        width: 8rem;
+    }
 }
 @media (max-width:576px) {
     .contentbox h1{
@@ -62,6 +67,10 @@
     .contentbox p{
         font-size: 1rem;
     }
+    .circle1{ 
+        height: 7rem;
+        width: 7rem;
+    }
 }
 @media (max-width:400px) {
     .contentbox h1{
@@ -69,5 +78,9 @@
     }
     .contentbox p{
         font-size: 1rem;
+    }
+    .circle1{ 
+        height: 6rem;
+        width: 6rem;
     }
 }

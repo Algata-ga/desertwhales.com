@@ -1,5 +1,5 @@
 import {Navbar} from "./components";
-import { Section1,Partner,Service,Cards,BeforeMedium,Medium,Footer } from "./sections";
+import { Section1,Partner,Service,Cards,Portfolio,BeforeMedium,Medium,Footer } from "./sections";
 
 function App() {
     return (
@@ -9,6 +9,7 @@ function App() {
             <Partner/>
             <Service/>
             <Cards/>
+            <Portfolio/>
             <BeforeMedium/>
             <Medium/>
             <Footer/>

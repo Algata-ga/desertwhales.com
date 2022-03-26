@@ -4,15 +4,15 @@ import { Container } from "react-bootstrap";
 const content=[
     {
         title: "HLL",
-        body: "HJGDSJHDJHG"
+        body: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         title: "HdLL",
-        body: "HJGDSJHDJHG"
+        body: "orem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         title: "HLeL",
-        body: "HJGDSJHDJHG"
+        body: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
     }
 ]
 const Cards  = () =>{
