@@ -7,7 +7,9 @@ import { useState } from "react";
 import { Transition } from "react-transition-group";
 
 const Navbar = () => {
-    const [nav, setNav] = useState(true);
+    const [nav, setNav] = useState(
+        () => !window.matchMedia("(max-width: 768px)").matches
+    );
     const defaultStyle = {
         transition: "all 1s ease-in-out",
         opacity: 1,
