@@ -10,6 +10,7 @@
   "dependencies": {
     "@react-jvectormap/core": "^1.0.1",
     "@react-jvectormap/world": "^1.0.0",
+    "@types/react-transition-group": "^4.4.4",
     "bootstrap": "^5.1.3",
     "jquery": "^3.6.0",
     "jsvectormap": "^1.4.5",

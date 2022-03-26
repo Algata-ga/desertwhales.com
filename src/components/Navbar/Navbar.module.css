@@ -1,4 +1,4 @@
-.header{
+.header {
     height: 100px;
     width: 100%;
     background: #121212;
@@ -7,7 +7,7 @@
     align-items: center;
     justify-items: center;
 }
-.dflex{
+.dflex {
     display: flex;
     align-items: center;
     justify-items: center;
@@ -15,36 +15,35 @@
 .logo {
     width: 20%;
 }
-.logo img{
+.logo img {
     height: 60px;
     width: auto;
 }
-.links,.close{
+.links,
+.close {
     position: relative;
     color: white;
     width: 80%;
     display: flex;
     justify-content: flex-end !important;
 }
-.hamburger{
+.hamburger {
     color: #ffffff;
     width: 80%;
     display: none;
     justify-content: flex-end;
 }
-.link{
+.link {
     margin: 0 20px;
     text-decoration: none;
     color: white;
 }
-.link:hover{
+.link:hover {
     color: #c89d66;
 }
 
-
-
 @media (max-width: 768px) {
-    .links{
+    .links {
         position: absolute;
         top: 100px;
         left: 0;
@@ -56,22 +55,28 @@
 
         clip-path: circle(0px at 0 0);
         -webkit-clip-path: circle(0px at 0 0);
-        transition: all 1s ease-in-out;
         justify-content: center !important;
         align-items: center;
     }
-    .link{
+    .link {
         margin: 2rem;
     }
-    .hamburger{
+    .hamburger {
         display: flex;
         font-size: 2rem;
     }
-    .open{
+    .open {
         clip-path: circle(500px at 0 0);
         -webkit-clip-path: circle(500px at 0 0);
+        transition: all 1s ease-in-out;
     }
-    .close{
+    .close {
         display: none;
     }
+    .hamburger_menu{
+        clip-path: circle(500px at 0 0);
+        -webkit-clip-path: circle(500px at 0 0);
+
+    }
 }
+
