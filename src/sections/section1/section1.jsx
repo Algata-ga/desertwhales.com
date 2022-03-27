@@ -36,7 +36,6 @@ const Section1 = () => {
                 </Container>
             </section>
             <Particles
-                id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
                 width="100%"

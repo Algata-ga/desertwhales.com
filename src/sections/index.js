@@ -6,4 +6,4 @@ export { default as BeforeMedium } from "./BeforeMedium/BeforeMedium";
 export { default as Medium } from "./Medium/Medium";
 export { default as Footer } from "./Footer/Footer";
 export { default as Portfolio } from "./Portfolio/Portfolio";
-
+export { default as KOIMap } from "./KOIMaps/koi";

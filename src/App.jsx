@@ -1,18 +1,29 @@
-import {Navbar} from "./components";
-import { Section1,Partner,Service,Cards,Portfolio,BeforeMedium,Medium,Footer } from "./sections";
+import { Navbar } from "./components";
+import {
+    Section1,
+    Partner,
+    Service,
+    Cards,
+    Portfolio,
+    BeforeMedium,
+    Medium,
+    Footer,
+    KOIMap,
+} from "./sections";
 
 function App() {
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <Section1 />
-            <Partner/>
-            <Service/>
-            <Cards/>
-            <Portfolio/>
-            <BeforeMedium/>
-            <Medium/>
-            <Footer/>
+            <Partner />
+            <Service />
+            <Cards />
+            <KOIMap />
+            <Portfolio />
+            <BeforeMedium />
+            <Medium />
+            <Footer />
         </>
     );
 }
