@@ -40,7 +40,7 @@ const options = {
             color: "#ffffff",
             distance: 150,
             enable: true,
-            opacity: 0.3,
+            opacity: 0.2,
             width: 2,
         },
         collisions: {
@@ -62,7 +62,7 @@ const options = {
             value: 50,
         },
         opacity: {
-            value: 0.5,
+            value: 0.3,
         },
         shape: {
             type: "square",
