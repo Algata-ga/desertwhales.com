@@ -41,7 +41,7 @@ const Partner = () => {
                 <Swiper className={style.swiper+ " " + "mySwiper"}
                     effect={"coverflow"}
                     grabCursor={true}
-                    centeredSlides={true}
+                    centeredSlides={false}
                     slidesPerView={"auto"}
 
                     autoplay={{

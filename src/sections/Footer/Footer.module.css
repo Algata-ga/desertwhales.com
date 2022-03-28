@@ -54,6 +54,9 @@ input{
     height: 35px;
     width: 70%;
 }
+.input:active{
+    border: none;
+}
 .subscribe button{
     padding: 0 10px;
     border: none;
