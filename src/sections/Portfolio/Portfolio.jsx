@@ -1,6 +1,6 @@
 import style from "./Portfolio.module.css";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -19,58 +19,53 @@ import logo8 from "../../assets/Tar.png";
 
 const folio1 = [
     {
-        "id": '0',
-        "img": logo0
+        id: "0",
+        img: logo0,
     },
     {
-        "id": '1',
-        "img": logo1
+        id: "1",
+        img: logo1,
     },
     {
-        "id": '2',
-        "img": logo2
+        id: "2",
+        img: logo2,
     },
     {
-        "id": '3',
-        "img": logo3
+        id: "3",
+        img: logo3,
     },
     {
-        "id": '4',
-        "img": logo4
+        id: "4",
+        img: logo4,
     },
     {
-        "id": '5',
-        "img": logo5
-    },
-]
-const folio2 = [
-  {
-        "id": '6',
-        "img": logo6
+        id: "5",
+        img: logo5,
     },
     {
-        "id": '7',
-        "img": logo7
+        id: "6",
+        img: logo6,
     },
     {
-        "id": '8',
-        "img": logo8
+        id: "7",
+        img: logo7,
     },
-
-
-]
+    {
+        id: "8",
+        img: logo8,
+    },
+];
 const Portfolio = () => {
     return (
-
         <section className={style.folio}>
             <h1>Portfolio</h1>
             <div className={style.portfolio}>
-                <Swiper className={style.swiper + " " + "mySwiper"}
+                <Swiper
+                    className={style.swiper + " " + "mySwiper"}
                     effect={"coverflow"}
                     grabCursor={true}
                     centeredSlides={true}
                     slidesPerView={"auto"}
-
                     autoplay={{
                         delay: 3000,
                         disableOnInteraction: true,
@@ -83,25 +78,16 @@ const Portfolio = () => {
                     }}
                     modules={[Autoplay, EffectCoverflow, Pagination]}
                 >
-                    
-                        <SwiperSlide className={style.slide}>
-                        {folio1.map((item) =>
+                    <SwiperSlide className={style.slide}>
+                        {folio1.map((item) => (
                             <div className={style.img}>
                                 <img src={item.img} alt="folio" />
                             </div>
-                            )}
-                        </SwiperSlide>
-                        <SwiperSlide className={style.slide}>
-                        {folio2.map((item) =>
-                            <div className={style.img}>
-                                <img src={item.img} alt="folio" />
-                            </div>
-                            )}
-                        </SwiperSlide>
+                        ))}
+                    </SwiperSlide>
                 </Swiper>
             </div>
-
         </section>
     );
-}
+};
 export default Portfolio;
