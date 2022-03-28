@@ -20,8 +20,9 @@
 }
 .img img{
     height: 40%;
+    max-height: 60%;
     width: 100%;
-    max-width: 50%;
+    max-width: 60%;
     object-fit: contain;
 }
 @media (max-width: 992px) {
