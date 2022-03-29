@@ -17,44 +17,60 @@ import logo6 from "../../assets/Metawear.png";
 import logo7 from "../../assets/Spacemisfit.png";
 import logo8 from "../../assets/Tar.png";
 
-const folio1 = [
+const portfolios = [
     {
         id: "0",
+        name: "dssad",
         img: logo0,
     },
     {
+        name: "dssad",
         id: "1",
         img: logo1,
     },
     {
+        name: "dssad",
         id: "2",
         img: logo2,
     },
     {
+        name: "dssad",
         id: "3",
         img: logo3,
     },
     {
+        name: "dssad",
         id: "4",
         img: logo4,
     },
     {
+        name: "dssad",
         id: "5",
         img: logo5,
     },
     {
+        name: "dssad",
         id: "6",
         img: logo6,
     },
     {
+        name: "dssad",
         id: "7",
         img: logo7,
     },
     {
+        name: "dssad",
         id: "8",
         img: logo8,
     },
 ];
+
+const chunk = (arr, size) =>
+    arr.reduce(
+        (acc, _, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]),
+        []
+    );
+
 const Portfolio = () => {
     return (
         <section className={style.folio}>
@@ -78,13 +94,16 @@ const Portfolio = () => {
                     }}
                     modules={[Autoplay, EffectCoverflow, Pagination]}
                 >
-                    <SwiperSlide className={style.slide}>
-                        {folio1.map((item) => (
-                            <div className={style.img}>
-                                <img src={item.img} alt="folio" />
-                            </div>
-                        ))}
-                    </SwiperSlide>
+                    {chunk(portfolios, 9).map((slide) => (
+                        // TODO : add min-height to each slide
+                        <SwiperSlide className={style.slide}>
+                            {slide.map((item) => (
+                                <div className={style.img}>
+                                    <img src={item.img} alt={item.name} />
+                                </div>
+                            ))}
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </section>
