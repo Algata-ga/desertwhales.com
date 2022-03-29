@@ -67,18 +67,21 @@ const MapChart = ({ setTooltipContent, markers }) => {
                         ))
                     }
                 </Geographies>
-                {markers.map(({ name, coordinates, markerOffset }) => (
+                {markers.map((loc) => (
                     <Marker
-                        key={name}
-                        coordinates={coordinates}
+                        key={loc.name}
+                        coordinates={loc.coordinates}
                         onMouseEnter={() => {
-                            setTooltipContent(`${name}`);
+                            setTooltipContent(loc);
                         }}
                         onMouseLeave={() => {
                             setTooltipContent("");
                         }}
                     >
-                        <CustomMarker name={name} markerOffset={markerOffset} />
+                        <CustomMarker
+                            name={loc.name}
+                            markerOffset={loc.markerOffset}
+                        />
                     </Marker>
                 ))}
             </ComposableMap>

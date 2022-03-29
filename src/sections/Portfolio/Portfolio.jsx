@@ -157,6 +157,7 @@ const Portfolio = () => {
                 >
                     {chunk(portfolios, 9).map((slide) => (
                         // TODO : add min-height to each slide
+                        // Make each image into a a tag
                         <SwiperSlide className={style.slide}>
                             {slide.map((item) => (
                                 <div className={style.img}>

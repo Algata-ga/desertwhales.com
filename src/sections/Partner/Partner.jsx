@@ -1,5 +1,5 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Container } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Container } from "react-bootstrap";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -7,43 +7,53 @@ import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import style from "./Partner.module.css";
 
-const logo = "https://picsum.photos/200/300";
+import InfinityPad from "../../assets/Infinity.png";
+import GameFi from "../../assets/Gamefi.png";
+import MoonStarter from "../../assets/moonstarter.png";
+
 const partners = [
     {
-        "name": 'A',
-        "image_url": logo,
-        "id": 0,
+        name: "A",
+        image_url: GameFi,
+        id: 0,
     },
     {
-        "name": 'B',
-        "image_url": logo,
-        "id": 1,
-    }, {
-        "name": 'C',
-        "image_url": logo,
-        "id": 2,
-    }, {
-        "name": 'D',
-        "image_url": logo,
-        "id": 3,
-    }, {
-        "name": 'E',
-        "image_url": logo,
-        "id": 4,
-    }
+        name: "A",
+        image_url: MoonStarter,
+        id: 0,
+    },
+    {
+        name: "A",
+        image_url: InfinityPad,
+        id: 0,
+    },
+    {
+        name: "A",
+        image_url: GameFi,
+        id: 0,
+    },
+    {
+        name: "A",
+        image_url: MoonStarter,
+        id: 0,
+    },
+    {
+        name: "A",
+        image_url: InfinityPad,
+        id: 0,
+    },
 ];
 
 const Partner = () => {
     return (
         <section className={style.partner}>
-
             <Container>
-                <Swiper className={style.swiper+ " " + "mySwiper"}
+                <Swiper
+                    className={style.swiper + " " + "mySwiper"}
                     effect={"coverflow"}
                     grabCursor={true}
                     centeredSlides={false}
                     slidesPerView={"auto"}
-
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: true,
@@ -56,17 +66,16 @@ const Partner = () => {
                     }}
                     modules={[Autoplay, EffectCoverflow, Pagination]}
                 >
-                    {partners.map((item) => 
+                    {partners.map((item) => (
                         <SwiperSlide className={style.slide}>
                             <img src={item.image_url} />
                         </SwiperSlide>
-                )}
+                    ))}
                 </Swiper>
-
             </Container>
-
         </section>
     );
-}
+};
 
 export default Partner;
+
