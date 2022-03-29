@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import style from "./Navbar.module.css";
 import logo from "../../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -12,10 +12,14 @@ const Navbar = () => {
     );
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
+        if (
+            typeof window !== "undefined" &&
+            window.matchMedia("(max-width:769px)").matches
+        ) {
             window.onscroll = () => setNav(false);
         }
     }, []);
+    useEffect(() => console.log("render"));
 
     const defaultStyle = {
         transition: "all 1s ease-in-out",
@@ -29,12 +33,7 @@ const Navbar = () => {
         exited: { opacity: 0 },
     };
     return (
-        <header
-            className={style.header}
-            onScroll={() => {
-                console.log("Scrolled H");
-            }}
-        >
+        <nav className={style.header}>
             <Container className={style.dflex}>
                 <div className={style.logo}>
                     <img src={logo} alt="logo" />
@@ -47,20 +46,57 @@ const Navbar = () => {
                                 ...defaultStyle,
                                 ...transitionStyles[state],
                             }}
-                            onScroll={() => {
-                                console.log("Scrolled M");
-                            }}
                         >
-                            <Link className={style.link} to="#">
+                            <Link
+                                spy={false}
+                                onSetActive={() => setNav(false)}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                                delay={250}
+                                isDynamic={true}
+                                className={style.link}
+                                to="Home"
+                            >
                                 Home
                             </Link>
-                            <Link className={style.link} to="#About">
+                            <Link
+                                spy={false}
+                                smooth={true}
+                                onSetActive={() => setNav(false)}
+                                offset={50}
+                                duration={500}
+                                delay={250}
+                                isDynamic={true}
+                                className={style.link}
+                                to="About"
+                            >
                                 About
                             </Link>
-                            <Link className={style.link} to="#Service">
+                            <Link
+                                spy={false}
+                                smooth={true}
+                                onSetActive={() => setNav(false)}
+                                offset={50}
+                                duration={500}
+                                delay={250}
+                                isDynamic={true}
+                                className={style.link}
+                                to="Services"
+                            >
                                 Services
                             </Link>
-                            <Link className={style.link} to="#Blog">
+                            <Link
+                                spy={false}
+                                smooth={true}
+                                onSetActive={() => setNav(false)}
+                                offset={50}
+                                duration={500}
+                                delay={250}
+                                isDynamic={true}
+                                className={style.link}
+                                to="Blogs"
+                            >
                                 Blogs
                             </Link>
                         </div>
@@ -70,7 +106,7 @@ const Navbar = () => {
                     <GiHamburgerMenu onClick={() => setNav(!nav)} />
                 </div>
             </Container>
-        </header>
+        </nav>
     );
 };
 

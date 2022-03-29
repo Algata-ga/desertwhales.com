@@ -10,6 +10,7 @@ import {
     Footer,
     KOIMap,
 } from "./sections";
+import { Element } from "react-scroll";
 import AnimatedCursor from "react-animated-cursor";
 
 function App() {
@@ -36,15 +37,23 @@ function App() {
                     ".link",
                 ]}
             />
-            <Navbar />
-            <Section1 />
+            <Element name="Home">
+                <Navbar />
+                <Section1 />
+            </Element>
             <Partner />
-            <Service />
-            <Cards />
+            <Element name="About">
+                <Service />
+            </Element>
+            <Element name="Services">
+                <Cards />
+            </Element>
             <KOIMap />
             <Portfolio />
             <BeforeMedium />
-            <Medium />
+            <Element name="Blogs">
+                <Medium />
+            </Element>
             <Footer />
         </>
     );
