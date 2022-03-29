@@ -63,6 +63,67 @@ const portfolios = [
         id: "8",
         img: logo8,
     },
+    {
+        id: "0",
+        name: "dssad",
+        img: logo0,
+    },
+    {
+        name: "dssad",
+        id: "1",
+        img: logo1,
+    },
+    {
+        name: "dssad",
+        id: "2",
+        img: logo2,
+    },
+    {
+        name: "dssad",
+        id: "3",
+        img: logo3,
+    },
+    {
+        name: "dssad",
+        id: "4",
+        img: logo4,
+    },
+    {
+        name: "dssad",
+        id: "5",
+        img: logo5,
+    },
+    {
+        name: "dssad",
+        id: "6",
+        img: logo6,
+    },
+    {
+        name: "dssad",
+        id: "7",
+        img: logo7,
+    },
+    {
+        name: "dssad",
+        id: "8",
+        img: logo8,
+    },
+
+    {
+        name: "dssad",
+        id: "6",
+        img: logo6,
+    },
+    {
+        name: "dssad",
+        id: "7",
+        img: logo7,
+    },
+    {
+        name: "dssad",
+        id: "8",
+        img: logo8,
+    },
 ];
 
 const chunk = (arr, size) =>
