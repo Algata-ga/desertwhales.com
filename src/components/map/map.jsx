@@ -6,6 +6,7 @@ import {
     Geography,
     Marker,
 } from "react-simple-maps";
+import { PatternCircles, Pattern, PatternHexagons } from "@visx/pattern";
 
 const geoUrl =
     "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
@@ -35,11 +36,20 @@ const MapChart = ({ setTooltipContent, markers }) => {
                 width="800"
                 style={{
                     borderRadius: "35%",
-                    backgroundColor: "#121212",
+                    backgroundColor: "black",
                     backdropFilter: "blur(2px)",
                     WebkitBackdropFilter: "blur(2px)",
                 }}
             >
+                {/* TODO: define custom pattern without clipping and we are good*/}
+                <PatternCircles
+                    id={"mapCircleFill"}
+                    height={8}
+                    width={8}
+                    fill="#FBDA83"
+                    backgroundColor="black"
+                    complement
+                />
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
                         geographies.map((geo) => (
@@ -48,19 +58,19 @@ const MapChart = ({ setTooltipContent, markers }) => {
                                 geography={geo}
                                 style={{
                                     default: {
-                                        fill: "#C69C65",
+                                        fill: "url(#mapCircleFill)",
                                         outline: "none",
-                                        stroke: "#C69C65",
+                                        stroke: "none",
                                     },
                                     hover: {
-                                        fill: "#C69C65",
-                                        stroke: "#C69C65",
+                                        fill: "url(#mapCircleFill)",
                                         outline: "none",
+                                        stroke: "none",
                                     },
                                     pressed: {
-                                        fill: "#C69C65",
-                                        stroke: "#C69C65",
+                                        fill: "url(#mapCircleFill)",
                                         outline: "none",
+                                        stroke: "none",
                                     },
                                 }}
                             />
