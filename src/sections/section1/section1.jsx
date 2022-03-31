@@ -25,16 +25,16 @@ const Section1 = () => {
                             You
                         </h1>
                         <div className={style.btns}>
-                        <a>
-                            <button className={style.contact}>
-                                Contact us
-                            </button>
-                        </a>
-                        <a href="#">
-                            <button className={style.academybtn}>
-                                Academy
-                            </button>
-                        </a>
+                            <a>
+                                <button className={style.contact}>
+                                    Contact us
+                                </button>
+                            </a>
+                            <a href="#">
+                                <button className={style.academybtn}>
+                                    Academy
+                                </button>
+                            </a>
                         </div>
                     </div>
                     <div className={style.bg}>
@@ -42,14 +42,14 @@ const Section1 = () => {
                     </div>
                 </Container>
             </section>
-            {/*<Particles
+            <Particles
                 init={particlesInit}
                 loaded={particlesLoaded}
                 width="100%"
                 height="calc(100vh - 100px)"
                 options={options}
                 style={{ top: "100px", zIndex: "-1", position: "absolute" }}
-    />*/}
+            />
         </>
     );
 };
