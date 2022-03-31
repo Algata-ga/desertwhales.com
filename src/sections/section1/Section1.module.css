@@ -28,6 +28,18 @@
     font-size: 4rem;
     font-weight: bolder;
 }
+.btns{
+}
+.contact {
+    border: 2px solid #d0a269;
+    background: #d0a269;
+    border-radius: 50px;
+    color: black;
+    padding: 5px 45px;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    margin-right: 15px;
+}
 .academybtn {
     border: 2px solid white;
     background: transparent;

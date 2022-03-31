@@ -1,4 +1,4 @@
-import { Navbar } from "./components";
+import { Navbar,Sidebar } from "./components";
 import {
     Section1,
     Partner,
@@ -16,6 +16,7 @@ import AnimatedCursor from "react-animated-cursor";
 function App() {
     return (
         <>
+        <Sidebar/>
             <AnimatedCursor
                 innerSize={15}
                 outerSize={19}

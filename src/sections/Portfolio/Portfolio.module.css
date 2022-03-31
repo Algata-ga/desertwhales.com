@@ -18,11 +18,9 @@
     height: 100px;
 }
 .slide img{
-    height: 40%;
     max-height: 60%;
-    width: 100%;
-    max-width: 60%;
-    object-fit: contain;
+    max-width: 45%;
+    object-fit: inherit;
 }
 .slide{
     background: black;
@@ -46,12 +44,12 @@
     
 }
 @media (max-width: 576px) {
+    .slide{
+        grid-template-columns: repeat(2, minmax(7rem, 1fr));
     
+        }
     .img{
         height: 75px;
-    }
-    .img img{
-        height: 70%;
     }
 }
 @media (max-width: 400px) {

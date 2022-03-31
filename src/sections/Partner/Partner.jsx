@@ -47,11 +47,12 @@ const partners = [
 const Partner = () => {
     return (
         <section className={style.partner}>
-            <Container>
+            <div>
                 <Swiper
                     className={style.swiper + " " + "mySwiper"}
+                    
                     effect={"coverflow"}
-                    grabCursor={true}
+                    grabCursor={false}
                     centeredSlides={false}
                     slidesPerView={"auto"}
                     autoplay={{
@@ -72,7 +73,7 @@ const Partner = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </Container>
+            </div>
         </section>
     );
 };

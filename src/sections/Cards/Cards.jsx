@@ -20,11 +20,11 @@ const content = [
 const Cards = () => {
     return (
         <section className={style.cards}>
-            <Container className={style.cardcontainer}>
+            <div className={style.cardcontainer}>
                 {content.map((c) => (
                     <Card title={c.title} body={c.body} key={c.title} />
                 ))}
-            </Container>
+            </div>
         </section>
     );
 };

@@ -1,0 +1,22 @@
+.side{
+    position: fixed;
+    top: 35%;
+    right: 0;
+    display: flex;
+    padding-right: 10px;
+    padding: 10px;
+    background: #323232;
+    border-radius: 25px 0 0 25px;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    z-index: 5;
+}
+.link{
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: 13px 0;
+    color: rgba(255, 255, 255, 0.603);
+}
+.link:hover{
+    color: #ca9e66;
+}

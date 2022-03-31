@@ -23,3 +23,7 @@ code {
 .swiper-3d .swiper-slide-shadow-top {
     background: transparent !important;
 }
+
+.swiper-wrapper{
+    align-items: center;
+}
