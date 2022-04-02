@@ -64,18 +64,18 @@ input{
     height: 35px;
     width: 30%;
 }
-ul{
+.ul{
     text-decoration: none;
     list-style: none;
     padding-left: 0.5rem !important;
     margin-left: 0%;
 }
-ul a{
+ .a{
     text-decoration: none;
     color: aliceblue;
 
 }
-ul a:hover{
+ .a:hover{
     color: #ca9e66;
 }
 @media (max-width:992px) {

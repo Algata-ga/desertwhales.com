@@ -7,50 +7,18 @@ import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import style from "./Partner.module.css";
 
-import InfinityPad from "../../assets/Infinity.png";
-import GameFi from "../../assets/Gamefi.png";
-import MoonStarter from "../../assets/moonstarter.png";
-
-const partners = [
-    {
-        name: "A",
-        image_url: GameFi,
-        id: 0,
-    },
-    {
-        name: "A",
-        image_url: MoonStarter,
-        id: 0,
-    },
-    {
-        name: "A",
-        image_url: InfinityPad,
-        id: 0,
-    },
-    {
-        name: "A",
-        image_url: GameFi,
-        id: 0,
-    },
-    {
-        name: "A",
-        image_url: MoonStarter,
-        id: 0,
-    },
-    {
-        name: "A",
-        image_url: InfinityPad,
-        id: 0,
-    },
-];
+import { usePartners } from "../../queries";
 
 const Partner = () => {
+    const partners = usePartners();
+    if (partners.isLoading) {
+        return <h4>Loading</h4>;
+    }
     return (
         <section className={style.partner}>
-            <div>
+            <div className={style.container}>
                 <Swiper
                     className={style.swiper + " " + "mySwiper"}
-                    
                     effect={"coverflow"}
                     grabCursor={false}
                     centeredSlides={false}
@@ -67,9 +35,11 @@ const Partner = () => {
                     }}
                     modules={[Autoplay, EffectCoverflow, Pagination]}
                 >
-                    {partners.map((item) => (
-                        <SwiperSlide className={style.slide}>
-                            <img src={item.image_url} />
+                    {partners.data.map((item) => (
+                        <SwiperSlide className={style.slide} key={item.name}>
+                            <a className={style.a} href={item.link}>
+                                <img src={item.image} alt={item.name} />
+                            </a>
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -79,4 +49,3 @@ const Partner = () => {
 };
 
 export default Partner;
-

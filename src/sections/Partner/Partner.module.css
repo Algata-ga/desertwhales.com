@@ -16,11 +16,19 @@
     justify-content: center;
     
 }
+.container{
+    width: min(90%,75rem);
+}
 .slide img{
-
-    max-height: 120px;
     object-fit: contain;
-    max-width: 50%;
+    width: min(60%,65%);
+
+    min-height: 150px;
+}
+.a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media (max-width: 576px) {
     .slide{

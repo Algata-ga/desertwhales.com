@@ -74,7 +74,9 @@ const Medium =() =>{
                 >
                     {medium.map((item) => 
                         <SwiperSlide className={style.slide}>
+                            <div className={style.imgbox}>
                             <img src={item.image_url} />
+                            </div>
                             <h5>{item.title}</h5>
                             <p>{item.content}</p>
                         </SwiperSlide>
