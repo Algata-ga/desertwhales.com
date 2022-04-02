@@ -40,11 +40,11 @@ const fetchKOI = async () => {
         `${import.meta.env.VITE_BASE_API_URL}/api/koi?_format=json`
     );
     const data = await response.json();
-    const parsedData = data.map(({ name, image, location }) => {
+    const parsedData = data.map(({ name, description, location }) => {
         return {
             name: name,
-            image: `${import.meta.env.VITE_BASE_API_URL}${image}`,
             coordinates: location.split(",").map((loc) => parseFloat(loc)),
+            description: description,
         };
     });
     return parsedData;

@@ -8,7 +8,8 @@ const KOIMap = () => {
     const [content, setContent] = useState("");
     const toolTipDisplay = (data) => {
         if (data === "") return "";
-        return `<h2>${data.name}</h2><img height="50px" src=${data.image} alt="${data.name}"/>`;
+        //return `<h2>${data.name}</h2><img height="50px" src=${data.image} alt="${data.name}"/>`;
+        return `<h2>${data.description}</h2>`;
     };
 
     if (markers.isLoading) {
