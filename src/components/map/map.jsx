@@ -91,10 +91,7 @@ const MapChart = ({ setTooltipContent, markers }) => {
                             setTooltipContent("");
                         }}
                     >
-                        <CustomMarker
-                            name={loc.name}
-                            markerOffset={loc.markerOffset}
-                        />
+                        <CustomMarker name={loc.name} markerOffset={10} />
                     </Marker>
                 ))}
             </ComposableMap>

@@ -5,11 +5,11 @@ const fetchPartners = async () => {
         `${import.meta.env.VITE_BASE_API_URL}/api/partners?_format=json`
     );
     const data = await response.json();
-    const parsedData = data.map(({ title, field_image, field_link }) => {
+    const parsedData = data.map(({ name, image, link }) => {
         return {
-            name: title,
-            image: `${import.meta.env.VITE_BASE_API_URL}${field_image}`,
-            link: field_link,
+            name: name,
+            image: `${import.meta.env.VITE_BASE_API_URL}${image}`,
+            link: link,
         };
     });
     return parsedData;
@@ -19,17 +19,16 @@ const usePartners = (settings) => useQuery("partners", fetchPartners, settings);
 
 const fetchPortfolios = async () => {
     const response = await fetch(
-        `${import.meta.env.VITE_BASE_API_URL}/api/portfolio?_format=json`
+        `${import.meta.env.VITE_BASE_API_URL}/api/portfolios?_format=json`
     );
     const data = await response.json();
-    const parsedData = data.map(({ title, field_image, field_link }) => {
+    const parsedData = data.map(({ name, image, link }) => {
         return {
-            name: title,
-            image: `${import.meta.env.VITE_BASE_API_URL}${field_image}`,
-            link: field_link,
+            name: name,
+            image: `${import.meta.env.VITE_BASE_API_URL}${image}`,
+            link: link,
         };
     });
-    console.log(parsedData);
     return parsedData;
 };
 
@@ -41,14 +40,11 @@ const fetchKOI = async () => {
         `${import.meta.env.VITE_BASE_API_URL}/api/koi?_format=json`
     );
     const data = await response.json();
-    const parsedData = data.map(({ title, field_image, field_location }) => {
+    const parsedData = data.map(({ name, image, location }) => {
         return {
-            markerOffset: 15,
-            name: title,
-            image: `${import.meta.env.VITE_BASE_API_URL}${field_image}`,
-            coordinates: field_location
-                .split(",")
-                .map((loc) => parseFloat(loc)),
+            name: name,
+            image: `${import.meta.env.VITE_BASE_API_URL}${image}`,
+            coordinates: location.split(",").map((loc) => parseFloat(loc)),
         };
     });
     return parsedData;
