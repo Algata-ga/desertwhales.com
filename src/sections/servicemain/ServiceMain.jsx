@@ -1,10 +1,11 @@
 import style from "./ServiceMain.module.css";
 import { Container } from "react-bootstrap";
+import vector1 from "../../assets/Vector1.svg";
+
 const Service =()=>{
     return(
         <section className={style.section}>
             <div className={style.circle1}>
-
             </div>
             <div className={style.circle2}>
 

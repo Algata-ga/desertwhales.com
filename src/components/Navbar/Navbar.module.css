@@ -1,10 +1,11 @@
 .header {
     height: 100px;
     width: 100%;
-    background: #121212;
+    background: linear-gradient(180deg, #0000 25%, #141414 100%) ;
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 3;
     justify-items: center;
 }
 .dflex {
@@ -37,6 +38,7 @@
     margin: 0 20px;
     text-decoration: none;
     color: white;
+    font-weight: 600;
 }
 .link:hover {
     color: #c89d66;
@@ -50,7 +52,7 @@
         flex-direction: column;
         width: 100%;
         height: calc(100vh - 100px);
-        background: #121212e5;
+        background: #121212dc;
         backdrop-filter: blur(2px);
         justify-content: center !important;
         align-items: center;

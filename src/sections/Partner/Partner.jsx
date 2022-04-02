@@ -16,9 +16,12 @@ const Partner = () => {
     }
     return (
         <section className={style.partner}>
+    
+            <h3 className={style.h3}>backed by</h3>
             <div className={style.container}>
                 <Swiper
                     className={style.swiper + " " + "mySwiper"}
+                    style={{paddingTop:"0.8rem",paddingBottom:"2rem",alignContent:"flex-start"}}
                     effect={"coverflow"}
                     grabCursor={false}
                     centeredSlides={false}
