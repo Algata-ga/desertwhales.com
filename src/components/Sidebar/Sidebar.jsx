@@ -6,7 +6,7 @@ import {FaTelegramPlane} from "react-icons/fa";
 const Sidebar = () =>{
     return(
         <div className={style.side}>
-            <FiFacebook className={style.link}/><FiInstagram className={style.link}/><BsMedium className={style.link}/><FiTwitter className={style.link}/><FaTelegramPlane className={style.link}/>
+                        <a href="#"><FiFacebook className={style.link}/></a><a href="#"><FiInstagram className={style.link}/></a><a href="#"><BsMedium className={style.link}/></a><a href="#"><FiTwitter className={style.link}/></a><a href="#"><FaTelegramPlane className={style.link}/></a>
         </div>
     );
     }
