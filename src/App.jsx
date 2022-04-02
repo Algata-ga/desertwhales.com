@@ -1,4 +1,4 @@
-import { Navbar,Sidebar } from "./components";
+import { Navbar, Sidebar } from "./components";
 import {
     Section1,
     Partner,
@@ -12,11 +12,32 @@ import {
 } from "./sections";
 import { Element } from "react-scroll";
 import AnimatedCursor from "react-animated-cursor";
+import { useIdle } from "react-use";
+import { Transition } from "react-transition-group";
 
 function App() {
+    const isIdle = useIdle(3e3, true);
+    const transitionStyles = {
+        entering: { opacity: 1 },
+        entered: { opacity: 1 },
+        exiting: { opacity: 1 },
+        exited: { opacity: 0 },
+    };
+
     return (
         <>
-        <Sidebar/>
+            <Transition in={isIdle} timeout={1000}>
+                {(state) => (
+                    <div
+                        style={{
+                            transition: "1s ease-in-out",
+                            ...transitionStyles[state],
+                        }}
+                    >
+                        <Sidebar />
+                    </div>
+                )}
+            </Transition>
             <AnimatedCursor
                 innerSize={15}
                 outerSize={19}
