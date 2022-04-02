@@ -16,7 +16,7 @@ import { useIdle } from "react-use";
 import { Transition } from "react-transition-group";
 
 function App() {
-    const isIdle = useIdle(3e3, true);
+    const isIdle = useIdle(5e3, true);
     const transitionStyles = {
         entering: { opacity: 1 },
         entered: { opacity: 1 },
@@ -28,14 +28,13 @@ function App() {
         <>
             <Transition in={isIdle} timeout={1000}>
                 {(state) => (
-                    <div
-                        style={{
+                    <Sidebar
+                        styles={{
                             transition: "1s ease-in-out",
+                            zIndex: "100000000",
                             ...transitionStyles[state],
                         }}
-                    >
-                        <Sidebar />
-                    </div>
+                    />
                 )}
             </Transition>
             <AnimatedCursor
