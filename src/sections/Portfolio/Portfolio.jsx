@@ -46,7 +46,7 @@ const Portfolio = () => {
                         <SwiperSlide className={style.slide}>
                             {slide.map((item) => (
                                 <div className={style.img}>
-                                    <a href={item.link}>
+                                    <a className={style.a} href={item.link}>
                                         <img src={item.image} alt={item.name} />
                                     </a>
                                 </div>

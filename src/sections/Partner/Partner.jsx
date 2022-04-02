@@ -16,7 +16,7 @@ const Partner = () => {
     }
     return (
         <section className={style.partner}>
-            <div>
+            <div className={style.container}>
                 <Swiper
                     className={style.swiper + " " + "mySwiper"}
                     effect={"coverflow"}
@@ -37,7 +37,7 @@ const Partner = () => {
                 >
                     {partners.data.map((item) => (
                         <SwiperSlide className={style.slide} key={item.name}>
-                            <a href={item.link}>
+                            <a className={style.a} href={item.link}>
                                 <img src={item.image} alt={item.name} />
                             </a>
                         </SwiperSlide>

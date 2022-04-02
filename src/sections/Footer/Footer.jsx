@@ -14,26 +14,27 @@ const Footer = () =>{
                 </div>
                 <div className={style.quicklink}>
                     <h6>Quick Links</h6>
-                    <ul>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                        <li>lorem</li>
+                    <ul className={style.ul}>
+                        <a className={style.a} href="#"><li className={style.li}>lorem</li></a>
+                        <a className={style.a} href="#"><li className={style.li}>lorem</li></a>
+                        <a className={style.a} href="#"><li className={style.li}>lorem</li></a>
+                        <a className={style.a} href="#"><li className={style.li}>lorem</li></a>
                     </ul>
                 </div>
                 <div className={style.company}>
                     <h6>Company</h6>
-                    <ul>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                        <li>lorem</li>
+                    <ul className={style.ul}>
+                    
+                        <a className={style.a} href="#"><li className={style.li}>lorem</li></a>
+                        <a className={style.a} href="#"><li className={style.li}>lorem</li></a>
+                        <a className={style.a} href="#"><li className={style.li}>lorem</li></a>
+                        <a className={style.a} href="#"><li className={style.li}>lorem</li></a>
                     </ul>
                 </div>
                 <div className={style.social}>
                     <h6>Social</h6>
                     <div className={style.links}>
-                        <FiFacebook className={style.link}/><FiInstagram className={style.link}/><BsMedium className={style.link}/><FiTwitter className={style.link}/><FaTelegramPlane className={style.link}/>
+                        <a className={style.a} href="#"><FiFacebook className={style.link}/></a><a href="#"><FiInstagram className={style.link}/></a><a href="#"><BsMedium className={style.link}/></a><a href="#"><FiTwitter className={style.link}/></a><a href="#"><FaTelegramPlane className={style.link}/></a>
                     </div>
                     <div className={style.subscribe}>
                         <h6>Lets do it</h6>
