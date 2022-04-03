@@ -46,7 +46,7 @@ const MapChart = ({ setTooltipContent, markers }) => {
                     id={"mapCircleFill"}
                     height={9}
                     width={9}
-                    fill="#FBDA83"
+                    fill="#545454"
                     backgroundColor="black"
                     complement
                 />
