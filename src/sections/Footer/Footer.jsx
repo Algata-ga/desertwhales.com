@@ -4,6 +4,8 @@ import {FiFacebook,FiInstagram,FiTwitter} from "react-icons/fi";
 import {BsMedium} from "react-icons/bs";
 import {FaTelegramPlane} from "react-icons/fa";
 
+const date = new Date();
+        const year = date.getFullYear();
 
 const Footer = () =>{
     return(
@@ -38,10 +40,16 @@ const Footer = () =>{
                     </div>
                     <div className={style.subscribe}>
                         <h6>Lets do it</h6>
-                        <input type="text" placeholder="email" />
+                        <input type="text" placeholder="Subscribe to newsletter" />
                         <button>Submit</button>
                     </div>
                 </div>
+            </div>
+            <div className={style.line}>
+
+            </div>
+            <div className={style.copyright}>
+                <h6>	© {year}  All rights reserved.</h6>
             </div>
         </footer>
         

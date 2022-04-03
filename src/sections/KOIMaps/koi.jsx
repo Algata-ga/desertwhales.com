@@ -11,7 +11,7 @@ const KOIMap = () => {
     const toolTipDisplay = (data) => {
         if (data === "") return "";
         //return `<h2>${data.name}</h2><img height="50px" src=${data.image} alt="${data.name}"/>`;
-        return `<h2>${data.description}</h2>`;
+        return `<div style="font-family: 'Raleway', sans-serif;">${data.description}</div>`;
     };
 
     if (markers.isLoading) {
@@ -19,7 +19,7 @@ const KOIMap = () => {
     }
     return (
         <section>
-            <h1 className={style.heading}>KOI's</h1>
+            <h1 className={style.heading}>KOIs</h1>
             <MapChart setTooltipContent={setContent} markers={markers.data} />
             <ReactTooltip html={true} clickable={true}>
                 {toolTipDisplay(content)}

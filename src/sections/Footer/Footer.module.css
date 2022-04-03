@@ -1,12 +1,13 @@
 .footerbg{
     width: 100%;
-    padding: 2rem 0;
+    padding-top: 2rem;
     font-family: 'Poppins', sans-serif;
 
     background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .footer{
     width: 90%;
@@ -79,6 +80,19 @@ input{
 }
  .a:hover{
     color: #ca9e66;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background: white;
+    margin-top: 2rem;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0 !important;
+    color: white;
 }
 @media (max-width:992px) {
     .footer{

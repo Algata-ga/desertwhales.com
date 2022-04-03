@@ -43,8 +43,6 @@
     text-transform: capitalize;
 
 }
-.btns{
-}
 .contact {
     border: 2px solid #d0a269;
     background: #d0a269;
@@ -80,6 +78,13 @@
     }
 }
 @media (max-width: 992px) {
+    .academybtn{
+        padding: 5px 40px;
+    }
+    .contact{
+        padding: 5px 35px;
+        margin-right: 5px;
+    }
     .content h1 {
         font-size: 2.2rem;
     }
@@ -88,6 +93,13 @@
     .main {
         grid-template-columns: repeat(1, minmax(18rem, 1fr));
         height: 90%;
+    }
+    .academybtn{
+        padding: 5px 45px;
+    }
+    .contact{
+        padding: 5px 40px;
+        margin-right: 15px;
     }
     .content {
         height: 30vh;
@@ -107,7 +119,7 @@
         height: 100%;
     }
     .content{
-        padding: 0 30px;
+        padding: 0 20px;
     }
     .content h1 {
         font-size: 2rem;
@@ -116,9 +128,27 @@
         align-self: center;
     }
 }
+@media (max-width: 576px) {
+    .content{
+        padding: 0 15px;
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact{
+        margin-right: 0;
+    }
+}
 @media (max-width: 420px) {
+    .content{
+        padding: 0 10px;
+    }
     .content h1 {
         font-size: 1.6rem;
     }
+    
 }
 
