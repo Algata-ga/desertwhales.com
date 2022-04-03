@@ -19,30 +19,19 @@
     font-weight: bolder;
     font-size: 4rem;
     z-index: 1;
+    line-height: 5.5rem;
 }
 .contentbox p{
     font-size: 1.5rem;
+    color: #737373;
 }
-.circle1{
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
-    background: rgba(151, 151, 151, 0.452);
-    border-radius: 50%;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.circle1{
-    top: 30px;
-    left: 50px;
-}
+
 
 
 @media (max-width:992px) {
     .contentbox h1{
         font-size: 3.5rem;
+        line-height: 5rem;
     }
     .contentbox p{
         font-size: 1.25rem;
@@ -51,36 +40,32 @@
 @media (max-width:768px) {
     .contentbox h1{
         font-size: 3rem;
+        line-height: 4.5rem;
     }
     .contentbox p{
         font-size: 1rem;
     }
-    .circle1{ 
-        height: 8rem;
-        width: 8rem;
-    }
+    
 }
 @media (max-width:576px) {
     .contentbox h1{
         font-size: 2.3rem;
+        line-height: 3.8rem;
+
     }
     .contentbox p{
         font-size: 1rem;
     }
-    .circle1{ 
-        height: 7rem;
-        width: 7rem;
-    }
+    
 }
 @media (max-width:400px) {
     .contentbox h1{
         font-size: 2rem;
+        line-height: 3.5rem;
+
     }
     .contentbox p{
         font-size: 1rem;
     }
-    .circle1{ 
-        height: 6rem;
-        width: 6rem;
-    }
+    
 }

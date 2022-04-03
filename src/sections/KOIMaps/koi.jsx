@@ -2,6 +2,8 @@ import { MapChart } from "../../components";
 import { useState } from "react";
 import ReactTooltip from "react-tooltip";
 import { useKOIs } from "../../queries";
+import style from "./koi.module.css";
+
 
 const KOIMap = () => {
     const markers = useKOIs();
@@ -17,6 +19,7 @@ const KOIMap = () => {
     }
     return (
         <section>
+            <h1 className={style.heading}>KOI's</h1>
             <MapChart setTooltipContent={setContent} markers={markers.data} />
             <ReactTooltip html={true} clickable={true}>
                 {toolTipDisplay(content)}

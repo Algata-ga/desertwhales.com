@@ -7,9 +7,10 @@
 }
 .lines{
     position: absolute;
-    height: 70vh;
+    height: 50vh;
+    width: auto;
     z-index: 1;
-    top: 0;
+    top: 0px;
     right: 0;
 }
 .main {
@@ -105,8 +106,14 @@
     .main {
         height: 100%;
     }
+    .content{
+        padding: 0 30px;
+    }
     .content h1 {
         font-size: 2rem;
+    }
+    .btns{
+        align-self: center;
     }
 }
 @media (max-width: 420px) {

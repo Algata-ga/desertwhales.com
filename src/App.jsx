@@ -13,30 +13,30 @@ import {
 import { Element } from "react-scroll";
 import AnimatedCursor from "react-animated-cursor";
 import { useIdle } from "react-use";
-import { Transition } from "react-transition-group";
+import { Transition,CSSTransition } from "react-transition-group";
 
 function App() {
     const isIdle = useIdle(5e3, true);
     const transitionStyles = {
-        entering: { opacity: 1 },
-        entered: { opacity: 1 },
+        entering: { opacity: 0 },
+        entered: { opacity: 1},
         exiting: { opacity: 1 },
-        exited: { opacity: 0 },
+        exited: { opacity: 0},
     };
 
     return (
         <>
-            <Transition in={isIdle} timeout={1000}>
+        <Transition in={isIdle} timeout={500}>
                 {(state) => (
                     <Sidebar
                         styles={{
-                            transition: "1s ease-in-out",
-                            zIndex: "100000000",
+                            transition: "opacity 0.5s ease-in-out",
                             ...transitionStyles[state],
                         }}
                     />
                 )}
             </Transition>
+            
             <AnimatedCursor
                 innerSize={15}
                 outerSize={19}

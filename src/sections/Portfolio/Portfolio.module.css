@@ -4,7 +4,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
     color: white;
+    padding-bottom: 2rem;
 }
 .portfolio{
     display: flex;
@@ -34,6 +37,7 @@
     height: 100%;
     width: 100%;
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: repeat(3, minmax(7rem, 1fr));
     color: white;
     margin: 15px;
@@ -41,17 +45,32 @@
     overflow: hidden;
 
 }
+.heading{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+}
+
 
 @media (max-width: 992px) {
-    
+    .heading{
+        font-size: 3.5rem;
+    }
     .img{
         height: 85px;
     }
 }
 @media (max-width: 768px) {
-    
+    .heading{
+        font-size: 3rem;
+    }
 }
 @media (max-width: 576px) {
+    .heading{
+        font-size: 2.3rem;
+    }
     .slide{
         grid-template-columns: repeat(2, minmax(7rem, 1fr));
     
@@ -61,6 +80,9 @@
     }
 }
 @media (max-width: 400px) {
+    .heading{
+        font-size: 2rem;
+    }
     .slide{
     grid-template-columns: repeat(2, minmax(7rem, 1fr));
 

@@ -1,7 +1,9 @@
 .header {
     height: 100px;
     width: 100%;
-    background: linear-gradient(180deg, #0000 25%, #141414 100%) ;
+    font-family: 'Poppins', sans-serif;
+
+    background: #06060600;
     position: relative;
     display: flex;
     align-items: center;

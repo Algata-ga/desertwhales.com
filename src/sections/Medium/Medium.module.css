@@ -14,7 +14,7 @@
 }
 .slide{
     background: black;
-    width: 23rem;
+    width: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,11 +45,18 @@
     -webkit-box-orient: vertical;
     white-space: normal;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
     text-overflow: ellipsis;
     line-clamp: 3;
     -webkit-line-clamp: 3;
     margin: 5px 0;
     text-align: center;
+}
+.slide h5{
+    font-weight: bold;
+}
+.slide p{
+    color: #828282;
 }
 @media (max-width:992px) {
     .slide{

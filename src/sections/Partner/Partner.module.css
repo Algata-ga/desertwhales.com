@@ -2,7 +2,9 @@
     width: 100%;
     height: 150px;
     position: relative;
-    background: linear-gradient(179.32deg, #141414 15%, #000000 85%);
+    font-family: 'Poppins', sans-serif;
+
+    background: #060606;
     display: flex;
     flex-direction: column;
     color: #737373;

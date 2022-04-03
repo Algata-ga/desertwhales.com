@@ -3,7 +3,7 @@ const options = {
     fullScreen: { enable: false },
     background: {
         color: {
-            value: "#141414",
+            value: "#060606",
         },
     },
     fpsLimit: 120,

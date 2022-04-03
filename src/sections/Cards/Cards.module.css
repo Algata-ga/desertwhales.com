@@ -1,6 +1,8 @@
 .cards{
     width: 100%;
     height: auto;
+    font-family: 'Poppins', sans-serif;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,13 +12,13 @@
 .cardcontainer{
     height: auto;
     display: grid;
+    grid-gap: 30px;
     grid-template-columns: repeat(3, minmax(300px, 450px));
 }
 @media (max-width: 992px) {
     .cardcontainer{
         grid-template-columns: repeat(1, minmax(350px, 450px));
         justify-content: center;
-
     }
 }
 @media (max-width: 768px) {

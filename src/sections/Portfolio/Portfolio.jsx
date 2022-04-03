@@ -22,7 +22,7 @@ const Portfolio = () => {
     }
     return (
         <section className={style.folio}>
-            <h1>Portfolio</h1>
+            <h1 className={style.heading}>Portfolio</h1>
             <div className={style.portfolio}>
                 <Swiper
                     className={style.swiper + " " + "mySwiper"}
