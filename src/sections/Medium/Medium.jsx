@@ -56,7 +56,7 @@ const Medium =() =>{
             
                 <Swiper className={style.swiper + " " + "mySwiper"}
                     effect={"coverflow"}
-                    grabCursor={true}
+                    grabCursor={false}
                     centeredSlides={true}
                     slidesPerView={"auto"}
 

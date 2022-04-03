@@ -1,6 +1,8 @@
 import style from "./Section1.module.css";
 import { Container } from "react-bootstrap";
 import bg from "../../assets/ette-ai-svg.svg";
+import linebg from "../../assets/lines\ home.svg";
+
 import Particles from "react-tsparticles";
 import options from "./particlesConfig.js";
 
@@ -14,16 +16,20 @@ const Section1 = () => {
     };
     return (
         <>
+<div className={style.lines}>
+                    <img src={linebg} alt="" srcset="" />
+                </div>
             <section className={style.section1}>
+                
                 <Container className={style.main}>
                     <div className={style.content}>
-                        <h6>
-                            We Make It <span>Possible For You</span>
-                        </h6>
+
                         <h1>
-                            We Make It Possible For YouWe Make It Possible For
-                            You
+                            we make it possible, for you
                         </h1>
+                        <h6>
+                            we make it possible for you we make it possible for you we make it possible for you
+                        </h6>
                         <div className={style.btns}>
                             <a>
                                 <button className={style.contact}>
