@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import vector1 from "../../assets/Vector1.svg";
 import vector2 from "../../assets/vector2.svg";
 import linebg from "../../assets/linesabout.svg";
+import { motion } from "framer-motion";
 
 const Service =()=>{
     return(

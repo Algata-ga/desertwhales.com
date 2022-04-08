@@ -35,9 +35,7 @@ const MapChart = ({ setTooltipContent, markers }) => {
                 data-tip=""
                 style={{
                     borderRadius: "35%",
-                    backgroundColor: "black",
-                    backdropFilter: "blur(2px)",
-                    WebkitBackdropFilter: "blur(2px)",
+                    backgroundColor: "#121212",
                 }}
             >
                 {/* TODO: define custom pattern without clipping and we are good*/}

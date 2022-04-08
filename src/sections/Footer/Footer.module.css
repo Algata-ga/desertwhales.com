@@ -3,7 +3,7 @@
     padding-top: 2rem;
     font-family: 'Poppins', sans-serif;
 
-    background: #000;
+    background: #121212;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,6 +93,24 @@ input{
     justify-content: center;
     padding: 0.5rem 0 !important;
     color: white;
+}
+@media (min-width:992px) {
+    .footer{
+        height: 12rem;
+    }
+    .logo,.quicklink,.company,.social{
+        justify-content: center;
+    }
+    .logo h6,.quicklink h6,.company h6,.social h6{
+        font-size: 1.3rem;
+    }
+    .ul {
+        font-size: 1.1rem;
+    }
+    .logo img{
+        width: 7rem;
+        height: auto;
+    }
 }
 @media (max-width:992px) {
     .footer{

@@ -1,7 +1,7 @@
 .section{
     width: 100%;
     padding: 9rem 0;
-    background: linear-gradient(179.32deg, #060606 2%, #000000 97.25%);
+    background: linear-gradient(179.32deg, #0e0e0e 25%, #121212 97.25%);
     position: relative;
     font-family: 'Poppins', sans-serif;
 
@@ -53,13 +53,51 @@
     z-index: 1;
     
 }
+@keyframes animate {
+    0%{
+        transform: translate(-5px,-5px);
+    }
+    25%{
+        transform: translate(0px,0);
+
+    }
+    50%{
+        transform: translate(5px,5px);
+
+    }
+    100%{
+        transform: translate(-5px,-5px);
+
+    }
+}
+@keyframes animate1 {
+    0%{
+        transform: translate(5px,5px);
+    }
+    25%{
+        transform: translate(0px,0);
+
+    }
+    50%{
+        transform: translate(-5px,-5px);
+
+    }
+    100%{
+        transform: translate(5px,5px);
+
+    }
+}
 .circle1{
     top: 0px;
     left: 40px;
+    animation: animate 5s linear infinite;
+
 }
 .circle2{
     bottom: 0px;
     right: 40px;
+    animation: animate1 5s linear infinite;
+
 }
 .lines{
     width: 40vw;

@@ -1,5 +1,5 @@
 .folio{
-    background: #000;
+    background: #121212;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
     object-fit: inherit;
 }
 .slide{
-    background: black;
+    background: transparent;
     height: 100%;
     width: 100%;
     display: grid;
