@@ -1,6 +1,8 @@
 import style from "./Cards.module.css";
 import { Card } from "../../components";
 import { Container } from "react-bootstrap";
+
+
 const content = [
     {
         title: "SOMETHING SOMETHING",

@@ -7,16 +7,15 @@ import { useState, useEffect } from "react";
 import { Transition } from "react-transition-group";
 
 const Navbar = () => {
-    const [nav, setNav] = useState(
-        () => !window.matchMedia("(max-width: 768px)").matches
-    );
+    const [nav, setNav] = useState(true );
+    const [side,setSide]=useState(true);
 
     useEffect(() => {
         if (
             typeof window !== "undefined" &&
             window.matchMedia("(max-width:769px)").matches
         ) {
-            window.onscroll = () => setNav(false);
+            window.onscroll = () => setSide(false);
         }
     }, []);
     useEffect(() => console.log("render"));
@@ -38,20 +37,14 @@ const Navbar = () => {
                 <div className={style.logo}>
                     <img src={logo} alt="logo" />
                 </div>
-                <Transition in={nav} timeout={1000}>
-                    {(state) => (
                         <div
-                            className={style.links + " " + style.hamburger_menu}
-                            style={{
-                                ...defaultStyle,
-                                ...transitionStyles[state],
-                            }}
+                            className={nav ? style.close : style.open}
                         >
                             <Link
                                 spy={false}
-                                onSetActive={() => setNav(false)}
+                                onClick={() => setNav(true)}
                                 smooth={true}
-                                offset={50}
+                                offset={0}
                                 duration={500}
                                 delay={250}
                                 isDynamic={true}
@@ -63,8 +56,8 @@ const Navbar = () => {
                             <Link
                                 spy={false}
                                 smooth={true}
-                                onSetActive={() => setNav(false)}
-                                offset={50}
+                                onClick={() => setNav(true)}
+                                offset={0}
                                 duration={500}
                                 delay={250}
                                 isDynamic={true}
@@ -76,8 +69,8 @@ const Navbar = () => {
                             <Link
                                 spy={false}
                                 smooth={true}
-                                onSetActive={() => setNav(false)}
-                                offset={50}
+                                onClick={() => setNav(true)}
+                                offset={0}
                                 duration={500}
                                 delay={250}
                                 isDynamic={true}
@@ -89,8 +82,8 @@ const Navbar = () => {
                             <Link
                                 spy={false}
                                 smooth={true}
-                                onSetActive={() => setNav(false)}
-                                offset={50}
+                                onClick={() => setNav(true)}
+                                offset={0}
                                 duration={500}
                                 delay={250}
                                 isDynamic={true}
@@ -100,10 +93,17 @@ const Navbar = () => {
                                 Blogs
                             </Link>
                         </div>
-                    )}
-                </Transition>
-                <div className={style.hamburger}>
-                    <GiHamburgerMenu onClick={() => setNav(!nav)} />
+                        <div className={style.hamburger}>
+                    <button
+                        className={nav ? style.btn : style.active}
+                        onClick={() => {
+                            setNav(!nav);
+                        }}
+                    >
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>
                 </div>
             </Container>
         </nav>

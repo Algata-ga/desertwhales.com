@@ -32,7 +32,7 @@ const Portfolio = () => {
                     slidesPerView={"auto"}
                     autoplay={{
                         delay: 3000,
-                        disableOnInteraction: true,
+                        disableOnInteraction: false,
                     }}
                     coverflowEffect={{
                         rotate: 0,

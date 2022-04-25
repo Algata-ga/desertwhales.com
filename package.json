@@ -12,6 +12,7 @@
     "@react-jvectormap/world": "^1.0.0",
     "@types/react-transition-group": "^4.4.4",
     "@visx/pattern": "^2.1.2",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.1.3",
     "framer-motion": "^6.2.9",
     "jquery": "^3.6.0",
