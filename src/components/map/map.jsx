@@ -8,8 +8,7 @@ import {
 } from "react-simple-maps";
 import { PatternCircles, Pattern, PatternHexagons } from "@visx/pattern";
 
-const geoUrl =
-    "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 const CustomMarker = ({ description }) => (
     <>
