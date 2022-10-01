@@ -8,12 +8,6 @@ const Sidebar = ({ styles }) => {
         <div style={styles}>
             <div className={style.side}>
                 <a href="#">
-                    <FiFacebook className={style.link} />
-                </a>
-                <a href="#">
-                    <FiInstagram className={style.link} />
-                </a>
-                <a href="#">
                     <BsMedium className={style.link} />
                 </a>
                 <a href="#">
@@ -27,4 +21,3 @@ const Sidebar = ({ styles }) => {
     );
 };
 export default Sidebar;
-

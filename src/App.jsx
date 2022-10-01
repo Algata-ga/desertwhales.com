@@ -13,20 +13,20 @@ import {
 import { Element } from "react-scroll";
 import AnimatedCursor from "react-animated-cursor";
 import { useIdle } from "react-use";
-import { Transition,CSSTransition } from "react-transition-group";
+import { Transition, CSSTransition } from "react-transition-group";
 
 function App() {
     const isIdle = useIdle(5e3, true);
     const transitionStyles = {
         entering: { opacity: 0 },
-        entered: { opacity: 1},
+        entered: { opacity: 1 },
         exiting: { opacity: 1 },
-        exited: { opacity: 0},
+        exited: { opacity: 0 },
     };
 
     return (
         <>
-        <Transition in={isIdle} timeout={500}>
+            <Transition in={isIdle} timeout={500}>
                 {(state) => (
                     <Sidebar
                         styles={{
@@ -36,7 +36,7 @@ function App() {
                     />
                 )}
             </Transition>
-            
+
             <AnimatedCursor
                 innerSize={15}
                 outerSize={19}
@@ -62,7 +62,6 @@ function App() {
                 <Navbar />
                 <Section1 />
             </Element>
-            <Partner />
             <Element name="About">
                 <Service />
             </Element>

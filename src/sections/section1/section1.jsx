@@ -1,7 +1,7 @@
 import style from "./Section1.module.css";
 import { Container } from "react-bootstrap";
 import bg from "../../assets/ette-ai-svg.svg";
-import linebg from "../../assets/lines\ home.svg";
+import linebg from "../../assets/lines home.svg";
 
 import Particles from "react-tsparticles";
 import options from "./particlesConfig.js";
@@ -16,19 +16,19 @@ const Section1 = () => {
     };
     return (
         <>
-<div className={style.lines}>
-                    <img src={linebg} alt="" srcset="" />
-                </div>
+            <div className={style.lines}>
+                <img src={linebg} alt="" srcset="" />
+            </div>
             <section className={style.section1}>
-                
                 <Container className={style.main}>
                     <div className={style.content}>
-
                         <h1>
-                            we make it possible, for you
+                            We explore, invest and support early stage
+                            blockchain projects
                         </h1>
                         <h6>
-                            we make it possible for you we make it possible for you we make it possible for you
+                            Desertwhales is a community and KOL backed capital
+                            in the MENA region
                         </h6>
                         <div className={style.btns}>
                             <a>
@@ -37,9 +37,12 @@ const Section1 = () => {
                                 </button>
                             </a>
                             <a href="#">
-                                <button className={style.academybtn}>
+                                <a
+                                    href="academy.desertwhales.com"
+                                    className={style.academybtn}
+                                >
                                     Academy
-                                </button>
+                                </a>
                             </a>
                         </div>
                     </div>

@@ -1,16 +1,15 @@
 import style from "./BeforeMedium.module.css";
 import { Container } from "react-bootstrap";
 
-const BeforeMedium = () =>{
-    return(
+const BeforeMedium = () => {
+    return (
         <section className={style.section}>
-            
-            
             <Container className={style.contentbox}>
-                <h1>We Can Back Support <br /> Your, Bussiness</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam <br /> amet magnam ipsum placeat ea quos!</p>
+                <h1>Our academy articles</h1>
+                <p>Here you find our latest articles</p>
             </Container>
         </section>
     );
-}
+};
 export default BeforeMedium;
+
