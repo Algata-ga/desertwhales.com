@@ -1,4 +1,4 @@
-.footerbg{
+.footerbg {
     width: 100%;
     padding-top: 2rem;
     font-family: 'Poppins', sans-serif;
@@ -9,7 +9,8 @@
     justify-content: center;
     flex-direction: column;
 }
-.footer{
+
+.footer {
     width: 90%;
     height: auto;
     display: grid;
@@ -18,117 +19,170 @@
 
     color: white;
 }
-.logo,.quicklink,.company,.social{
+
+.logo,
+.quicklink,
+.company,
+.social {
     display: flex;
     flex-direction: column;
     grid-area: 1fr;
 }
-.logo{
+
+.logo {
     grid-area: img;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.quicklink{
+
+.quicklink {
     grid-area: quick;
 }
-.company{
+
+.company {
     grid-area: company;
 }
-.social{
+
+.social {
     grid-area: social;
 }
-.logo img{
+
+.logo img {
     width: 80px;
     object-fit: contain;
 }
 
-.link{
+.link {
     border-radius: 50%;
     font-size: 1.75rem;
-    margin: 7px;
-    padding: 2px;
     color: rgba(255, 255, 255, 0.603);
 }
-.link:hover{
+
+.link:hover {
     color: #ca9e66;
 }
-input{
+
+input {
     height: 35px;
     width: 70%;
 }
-.input:active{
+
+.input:active {
     border: none;
 }
-.subscribe button{
+
+.subscribe button {
     padding: 0 10px;
     border: none;
     background: #ca9e66;
     height: 35px;
     width: 30%;
 }
-.ul{
+
+.ul {
     text-decoration: none;
     list-style: none;
     padding-left: 0.5rem !important;
     margin-left: 0%;
+    display: flex;
+    flex-direction: column;
 }
- .a{
+
+.ul a {
     text-decoration: none;
     color: aliceblue;
+    font-size: 0.95rem;
+}
 
+.ul a {
+    margin-bottom: 5px !important;
 }
- .a:hover{
-    color: #ca9e66;
+
+.ul a:hover {
+    color: #ca9e66 !important;
 }
-.line{
+
+.line {
     width: 100%;
     height: 1px;
     background: white;
     margin-top: 2rem;
 }
-.copyright{
+
+.copyright {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.5rem 0 !important;
     color: white;
 }
+.links a{
+    margin: 10px;
+}
+
 @media (min-width:992px) {
-    .footer{
+    .footer {
         height: 12rem;
     }
-    .logo,.quicklink,.company,.social{
+
+    .logo,
+    .quicklink,
+    .company,
+    .social {
         justify-content: center;
     }
-    .logo h6,.quicklink h6,.company h6,.social h6{
+
+    .logo h6,
+    .quicklink h6,
+    .company h6,
+    .social h6 {
         font-size: 1.3rem;
     }
+
     .ul {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
-    .logo img{
+
+    .logo img {
         width: 7rem;
         height: auto;
     }
 }
+
 @media (max-width:992px) {
-    .footer{
+    .footer {
         grid-template-areas: "img quick company"
-                            "social social social" ;
+            "social social social";
     }
 
-    .social{
+    .social {
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
+        .logo h6,
+        .quicklink h6,
+        .company h6,
+        .social h6 {
+            font-size: 1.2rem;
+        }
+
 }
+
 @media (max-width:768px) {
-    .logo{
+    .logo {
         padding: 1rem 0;
     }
-    .footer{
-        grid-template-areas: "img img " "quick company" "social social ";
+        .logo h6,
+        .quicklink h6,
+        .company h6,
+        .social h6 {
+            font-size: 1.2rem;
+        }
+
+    .footer {
+        grid-template-areas: "img img ""quick company""social social ";
         justify-items: center;
     }
 }

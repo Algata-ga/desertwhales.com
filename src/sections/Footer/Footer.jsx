@@ -3,6 +3,7 @@ import logo from "../../assets/logo.png";
 import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
 import { BsMedium } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const date = new Date();
 const year = date.getFullYear();
@@ -16,55 +17,128 @@ const Footer = () => {
                 </div>
                 <div className={style.quicklink}>
                     <h6>Services</h6>
-                    <ul className={style.ul}>
-                        <a className={style.a} href="#">
-                            <li className={style.li}>Funding</li>
-                        </a>
-                        <a className={style.a} href="#">
-                            <li className={style.li}>Advisory</li>
-                        </a>
-                        <a className={style.a} href="#">
-                            <li className={style.li}>Community Localization</li>
-                        </a>
-                        <a className={style.a} href="#">
-                            <li className={style.li}>Partnership</li>
-                        </a>
-                        <a className={style.a} href="#">
-                            <li className={style.li}>KOL/Influencers</li>
-                        </a>
-                    </ul>
+                    <div className={style.ul}>
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={-50}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="Services"
+                        >
+                            Funding
+                        </Link>
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={-50}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="Services"
+                        >
+                            Advisory
+                        </Link>
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={-50}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="Services"
+                        >
+                            Community Localization
+                        </Link>
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={-50}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="Services"
+                        >
+                            Partnership
+                        </Link>
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={-50}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="Services"
+                        >
+                            KOL/Influencers
+                        </Link>
+                    </div>
                 </div>
                 <div className={style.company}>
                     <h6>Resources</h6>
-                    <ul className={style.ul}>
-                        <a className={style.a} href="#">
-                            <li className={style.li}>Home</li>
-                        </a>
-                        <a className={style.a} href="#">
-                            <li className={style.li}>About Us</li>
-                        </a>
+                    <div className={style.ul}>
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="Home"
+                        >
+                            Home
+                        </Link>
 
-                        <a className={style.a} href="#">
-                            <li className={style.li}>Portfolio</li>
-                        </a>
-                        <a className={style.a} href="#">
-                            <li className={style.li}>Testimonials</li>
-                        </a>
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="About"
+                        >
+                            About
+                        </Link>
+
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="Portfolio"
+                        >
+                            Portfolio
+                        </Link>
+                        <Link
+                            spy={false}
+                            smooth={true}
+                            offset={-100}
+                            duration={500}
+                            delay={250}
+                            isDynamic={true}
+                            to="Testimonials"
+                        >
+                            Testimonials
+                        </Link>
                         <a className={style.a} href="#">
                             <li className={style.li}>Academy</li>
                         </a>
-                    </ul>
+                    </div>
                 </div>
                 <div className={style.social}>
                     <h6>Social</h6>
                     <div className={style.links}>
-                        <a href="#">
+                        <a href="https://medium.com/@desert_whales">
                             <BsMedium className={style.link} />
                         </a>
-                        <a href="#">
+                        <a href="https://twitter.com/Desert_Whales">
                             <FiTwitter className={style.link} />
                         </a>
-                        <a href="#">
+                        <a href="https://telegram.me/Desert_Whales_Chat">
                             <FaTelegramPlane className={style.link} />
                         </a>
                     </div>
