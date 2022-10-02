@@ -139,7 +139,7 @@
     .section1 {
         position: relative;
         top: 100px;
-        height: calc(100vh + 100px);
+        height: calc(100vh + 70px);
     }
 
     .main {
@@ -161,7 +161,7 @@
 
     .contact {
         padding: 5px 40px;
-        margin-right: 15px;
+        margin-right: 0;
     }
 
     .content {
