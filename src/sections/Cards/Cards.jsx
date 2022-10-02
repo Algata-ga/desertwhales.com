@@ -1,5 +1,6 @@
 import style from "./Cards.module.css";
 import { Card } from "../../components";
+import { Container } from "react-bootstrap";
 
 const content = [
     {
@@ -28,11 +29,13 @@ const content = [
 const Cards = () => {
     return (
         <section className={style.cards}>
-            <div className={style.cardcontainer}>
-                {content.map((c) => (
-                    <Card title={c.title} body={c.body} key={c.title} />
-                ))}
-            </div>
+            <Container>
+                <div className={style.cardcontainer}>
+                    {content.map((c) => (
+                        <Card title={c.title} body={c.body} key={c.title} />
+                    ))}
+                </div>
+            </Container>
         </section>
     );
 };
