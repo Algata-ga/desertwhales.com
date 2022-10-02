@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     position: relative;
-    top: 100px;
 }
 
 .lines {
@@ -60,14 +59,15 @@
     padding: 5px 45px;
     margin-top: 2rem;
     font-size: 1.3rem;
+    margin-right: 15px;
 }
 
 
-.btns a{
+.btns a {
     text-decoration: none;
 }
 
-.btns a:hover{
+.btns a:hover {
     color: inherit;
 }
 
@@ -103,14 +103,20 @@
     .academybtn {
         padding: 5px 40px;
     }
-        .btns {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    .btns a:nth-child(2n){
+
+    .btns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .academybtn {
+        margin-right: 0 !important;
+    }
+
+    .btns a:nth-child(2n) {
         margin-top: 15px;
     }
+
     .contact {
         padding: 5px 35px;
         margin-right: 5px;
@@ -120,16 +126,31 @@
         font-size: 2.2rem;
     }
 }
-@media (max-height: 769px){
-    .main,.section1{
+
+@media (max-height: 769px) {
+
+    .main,
+    .section1 {
         height: 100vh;
     }
 }
 
 @media (max-width: 768px) {
+    .section1 {
+        position: relative;
+        top: 100px;
+        height: calc(100vh + 100px);
+    }
+
     .main {
         grid-template-columns: repeat(1, minmax(18rem, 1fr));
         height: 100%;
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .academybtn {
@@ -158,24 +179,28 @@
         height: 80%;
     }
 }
+
 @media (max-height: 600px) {
-    .section1{
+    .section1 {
         height: auto;
         box-sizing: border-box;
     }
-    .main{
+
+    .main {
         height: 100%;
     }
-    .content{
+
+    .content {
         height: auto;
     }
 }
 
 @media (max-width: 600px) {
-    .section1{
+    .section1 {
         max-height: max-content;
     }
-    .btns a{
+
+    .btns a {
         margin-top: 15px;
     }
 
