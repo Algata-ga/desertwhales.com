@@ -2,9 +2,7 @@
     height: 100px;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-
-    background-color: rgba(0, 0, 0, 0.9);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
 
     position: fixed;
@@ -47,7 +45,7 @@
 
 @media (max-width: 768px) {
     .header{
-        height: 100px;
+        height: 70px;
     }
     .logo img {
         height: 45px;
