@@ -1,89 +1,57 @@
 import style from "./Medium.module.css";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 
+import { useArticles } from "../../queries";
 
-const logo = "https://picsum.photos/300/200";
-const medium = [
-    {
-        "name": 'A',
-        "image_url": logo,
-        "title": 'hello there',
-        "content" : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem exercitationem voluptatum minus quae eaque vitae tempore.',
-        "id": 0,
-    },
-    {
-        "name": 'B',
-        "image_url": logo,
-        "title": 'hello there',
-        "content" : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem exercitationem voluptatum minus quae eaque vitae tempore.',
-
-        "id": 1,
-    }, {
-        "name": 'C',
-        "image_url": logo,
-        "title": 'hello there',
-        "content" : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem exercitationem voluptatum minus quae eaque vitae tempore.',
-
-        "id": 2,
-    }, {
-        "name": 'D',
-        "image_url": logo,
-        "title": 'hello there',
-        "content" : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem exercitationem voluptatum minus quae eaque vitae tempore.',
-
-        "id": 3,
-    }, {
-        "name": 'E',
-        "image_url": logo,
-        "title": 'hello there',
-        "content" : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem exercitationem voluptatum minus quae eaque vitae tempore.',
-
-        "id": 4,
-    }
-];
-
-const Medium =() =>{
-    return(
-
+const Medium = () => {
+    const articles = useArticles();
+    if (articles.isLoading) return null;
+    console.log(articles.data);
+    return (
         <section className={style.medium}>
-
-            
-                <Swiper className={style.swiper + " " + "mySwiper"}
-                    effect={"coverflow"}
-                    grabCursor={false}
-                    centeredSlides={true}
-                    slidesPerView={"auto"}
-
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 0,
-                        modifier: 1,
-                    }}
-                    modules={[Autoplay, EffectCoverflow, Pagination]}
-                >
-                    {medium.map((item) => 
-                        <SwiperSlide className={style.slide}>
-                            <div className={style.imgbox}>
-                            <img src={item.image_url} />
-                            </div>
-                            <h5>{item.title}</h5>
-                            <p>{item.content}</p>
-                        </SwiperSlide>
-                )}
-                </Swiper>
+            <Swiper
+                className={style.swiper + " " + "mySwiper"}
+                effect={"coverflow"}
+                grabCursor={false}
+                centeredSlides={true}
+                slidesPerView={"auto"}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 0,
+                    modifier: 1,
+                }}
+                modules={[Autoplay, EffectCoverflow, Pagination]}
+            >
+                {articles.data.map((item) => (
+                    <SwiperSlide className={style.slide}>
+                        <div className={style.imgbox}>
+                            <img src={item.banner} />
+                        </div>
+                        <h5>{item.title}</h5>
+                        <h6>
+                            {item.tags.reduce(
+                                (prev, cur) => prev + " " + cur,
+                                ""
+                            )}
+                        </h6>
+                        <p>{item.level}</p>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </section>
     );
-}
+};
 
 export default Medium;
+

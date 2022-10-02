@@ -52,4 +52,18 @@ const fetchKOI = async () => {
 
 const useKOIs = (settings) => useQuery("koi", fetchKOI, settings);
 
-export { usePartners, useKOIs, usePortfolios };
+const fetchArticles = async () => {
+    console.log("fuck");
+    const response = await fetch(
+        `${import.meta.env.VITE_ACADEMY_URL}/api/articles/latest`
+    );
+    const data = await response.json();
+
+    console.log(data);
+
+    return data;
+};
+
+const useArticles = (settings) => useQuery("articles", fetchArticles, settings);
+
+export { usePartners, useKOIs, usePortfolios, useArticles };
