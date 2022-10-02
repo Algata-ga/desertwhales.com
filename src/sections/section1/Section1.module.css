@@ -1,9 +1,11 @@
 .section1 {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100vh;
     background: transparent;
     display: flex;
     align-items: center;
+    position: relative;
+    top: 100px;
 }
 
 .lines {
