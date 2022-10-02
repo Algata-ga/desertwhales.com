@@ -5,11 +5,11 @@ import {
     Service,
     Cards,
     Portfolio,
-    BeforeMedium,
     Medium,
     Footer,
     KOIMap,
-    Testimonials
+    Testimonials,
+    Heading
 } from "./sections";
 import { Element } from "react-scroll";
 import AnimatedCursor from "react-animated-cursor";
@@ -71,11 +71,11 @@ function App() {
             </Element>
             <KOIMap />
             <Portfolio />
-            <BeforeMedium />
+            <Heading title="Testimonials" desc="Have a Look at what other people have to say about desert whales." />
             <Element name="Testimonials">
                 <Testimonials />
             </Element>
-            <BeforeMedium />
+            <Heading title="Our academy articles" desc="Here you find our latest articles" />
             <Element name="Blogs">
                 <Medium />
             </Element>
