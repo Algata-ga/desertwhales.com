@@ -8,35 +8,13 @@ import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { BsFillChatQuoteFill } from "react-icons/bs"
 
-const testimonials = [
-    {
-        desc: "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en  Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en",
-        name: "Benjammin frankilin",
-        company: "CEO, XYZ"
-    },
-    {
-        desc: "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en  Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en",
-        name: "Benjammin frankilin",
-        company: "CEO, XYZ"
-    },
-    {
-        desc: "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en  Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en",
-        name: "Benjammin frankilin",
-        company: "CEO, XYZ"
-    },
-    {
-        desc: "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en  Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en",
-        name: "Benjammin frankilin",
-        company: "CEO, XYZ"
-    },
-    {
-        desc: "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en  Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en",
-        name: "Benjammin frankilin",
-        company: "CEO, XYZ"
-    },
-]
+import { useTestimonials } from "../../queries";
+
 
 const Testimonials = () => {
+    const testimonials = useTestimonials();
+    if (testimonials.isLoading) return null;
+    console.log(testimonials);
     return (
         <section className={style.testimonials}>
             <Swiper
@@ -57,12 +35,12 @@ const Testimonials = () => {
                 }}
                 modules={[Autoplay, EffectCoverflow, Pagination]}
             >
-                {testimonials.map((item) => (
+                {testimonials.data.map((item) => (
                     <SwiperSlide className={style.slide}>
                         <BsFillChatQuoteFill />
-                        <p>{item.desc}</p>
-                        <h5>{item.name}</h5>
-                        <h6>{item.company}</h6>
+                        <p dangerouslySetInnerHTML={{__html:item.body}}></p>
+                        <h5>{item.user_name}</h5>
+                        <h6>{item.user_designation}</h6>
                     </SwiperSlide>
                 ))}
             </Swiper>
