@@ -9,6 +9,7 @@ import {
     Medium,
     Footer,
     KOIMap,
+    Testimonials
 } from "./sections";
 import { Element } from "react-scroll";
 import AnimatedCursor from "react-animated-cursor";
@@ -70,6 +71,10 @@ function App() {
             </Element>
             <KOIMap />
             <Portfolio />
+            <BeforeMedium />
+            <Element name="Testimonials">
+                <Testimonials />
+            </Element>
             <BeforeMedium />
             <Element name="Blogs">
                 <Medium />
