@@ -53,20 +53,15 @@ const fetchKOI = async () => {
 const useKOIs = (settings) => useQuery("koi", fetchKOI, settings);
 
 const fetchArticles = async () => {
-    console.log("fuck");
     const response = await fetch(
         `${import.meta.env.VITE_ACADEMY_URL}/api/articles/latest`
     );
     const data = await response.json();
 
-    console.log(data);
-
     return data;
 };
 
 const useArticles = (settings) => useQuery("articles", fetchArticles, settings);
-
-
 
 const fetchTestimonials = async () => {
     const response = await fetch(
@@ -84,12 +79,9 @@ const fetchTestimonials = async () => {
         };
     });
     return parsedData;
-    
 };
 
 const useTestimonials = (settings) =>
     useQuery("testimonials", fetchTestimonials, settings);
 
-
-
-export { usePartners, useKOIs, usePortfolios, useArticles ,useTestimonials};
+export { usePartners, useKOIs, usePortfolios, useArticles, useTestimonials };

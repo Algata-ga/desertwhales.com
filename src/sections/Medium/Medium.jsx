@@ -13,7 +13,6 @@ import { Container } from "react-bootstrap";
 const Medium = () => {
     const articles = useArticles();
     if (articles.isLoading) return null;
-    console.log(articles.data);
     return (
         <section className={style.medium}>
             <Container>
@@ -57,4 +56,3 @@ const Medium = () => {
 };
 
 export default Medium;
-
