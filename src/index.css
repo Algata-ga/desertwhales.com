@@ -10,7 +10,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+* {
     font-family: 'Poppins', sans-serif;
 }
 
