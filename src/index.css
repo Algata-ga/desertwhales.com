@@ -12,6 +12,7 @@ body {
 
 * {
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 .swiper-3d .swiper-slide-shadow,
