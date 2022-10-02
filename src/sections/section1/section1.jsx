@@ -51,14 +51,14 @@ const Section1 = () => {
                     </div>
                 </Container>
             </section>
-            {/*<Particles
+            <Particles
                 init={particlesInit}
                 loaded={particlesLoaded}
                 width="100%"
                 height="max(866px, 100vh)"
                 options={options}
                 style={{ top: "100px", zIndex: "-1", position: "absolute" }}
-            /> */}
+            /> 
         </>
     );
 };
