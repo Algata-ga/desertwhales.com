@@ -55,7 +55,7 @@ const Section1 = () => {
                 init={particlesInit}
                 loaded={particlesLoaded}
                 width="100%"
-                height="calc(100vh - 100px)"
+                height="max(866px, 100vh)"
                 options={options}
                 style={{ top: "100px", zIndex: "-1", position: "absolute" }}
             />
