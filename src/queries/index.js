@@ -66,4 +66,29 @@ const fetchArticles = async () => {
 
 const useArticles = (settings) => useQuery("articles", fetchArticles, settings);
 
-export { usePartners, useKOIs, usePortfolios, useArticles };
+
+
+const fetchTestimonials = async () => {
+    const response = await fetch(
+        `${import.meta.env.VITE_BASE_API_URL}/api/testimonials?_format=json`
+    );
+    const data = await response.json();
+    console.log("hi");
+    console.log(data);
+    const parsedData = data.map(({ body, user_name, user_designation }) => {
+        return {
+            body,
+            user_name,
+            user_designation,
+        };
+    });
+    return parsedData;
+    
+};
+
+const useTestimonials = (settings) =>
+    useQuery("testimonials", fetchTestimonials, settings);
+
+
+
+export { usePartners, useKOIs, usePortfolios, useArticles ,useTestimonials};
