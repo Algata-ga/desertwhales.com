@@ -60,8 +60,13 @@
     padding: 5px 45px;
     margin-top: 2rem;
     font-size: 1.3rem;
-    margin-right: 15px;
 }
+
+
+.btns a{
+    text-decoration: none;
+}
+
 .btns a:hover{
     color: inherit;
 }
@@ -98,7 +103,14 @@
     .academybtn {
         padding: 5px 40px;
     }
-
+        .btns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    .btns a:nth-child(2n){
+        margin-top: 15px;
+    }
     .contact {
         padding: 5px 35px;
         margin-right: 5px;
@@ -123,6 +135,8 @@
     .academybtn {
         padding: 5px 45px;
     }
+
+
 
     .contact {
         padding: 5px 40px;
