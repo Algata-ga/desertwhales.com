@@ -1,15 +1,15 @@
-import style from "./BeforeMedium.module.css";
+import style from "./Heading.module.css";
 import { Container } from "react-bootstrap";
 
-const BeforeMedium = () => {
+const Heading = ({title,desc}) => {
     return (
         <section className={style.section}>
             <Container className={style.contentbox}>
-                <h1>Our academy articles</h1>
-                <p>Here you find our latest articles</p>
+                <h1>{title}</h1>
+                <p>{desc}</p>
             </Container>
         </section>
     );
 };
-export default BeforeMedium;
+export default Heading;
 
