@@ -7,8 +7,8 @@ import { useState, useEffect } from "react";
 import { Transition } from "react-transition-group";
 
 const Navbar = () => {
-    const [nav, setNav] = useState(true );
-    const [side,setSide]=useState(true);
+    const [nav, setNav] = useState(true);
+    const [side, setSide] = useState(true);
 
     useEffect(() => {
         if (
@@ -18,7 +18,6 @@ const Navbar = () => {
             window.onscroll = () => setSide(false);
         }
     }, []);
-    useEffect(() => console.log("render"));
 
     const defaultStyle = {
         transition: "all 1s ease-in-out",
@@ -37,63 +36,61 @@ const Navbar = () => {
                 <div className={style.logo}>
                     <img src={logo} alt="logo" />
                 </div>
-                        <div
-                            className={nav ? style.close : style.open}
-                        >
-                            <Link
-                                spy={false}
-                                onClick={() => setNav(true)}
-                                smooth={true}
-                                offset={0}
-                                duration={500}
-                                delay={250}
-                                isDynamic={true}
-                                className={style.link}
-                                to="Home"
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                spy={false}
-                                smooth={true}
-                                onClick={() => setNav(true)}
-                                offset={0}
-                                duration={500}
-                                delay={250}
-                                isDynamic={true}
-                                className={style.link}
-                                to="About"
-                            >
-                                About
-                            </Link>
-                            <Link
-                                spy={false}
-                                smooth={true}
-                                onClick={() => setNav(true)}
-                                offset={0}
-                                duration={500}
-                                delay={250}
-                                isDynamic={true}
-                                className={style.link}
-                                to="Services"
-                            >
-                                Services
-                            </Link>
-                            <Link
-                                spy={false}
-                                smooth={true}
-                                onClick={() => setNav(true)}
-                                offset={0}
-                                duration={500}
-                                delay={250}
-                                isDynamic={true}
-                                className={style.link}
-                                to="Blogs"
-                            >
-                                Blogs
-                            </Link>
-                        </div>
-                        <div className={style.hamburger}>
+                <div className={nav ? style.close : style.open}>
+                    <Link
+                        spy={false}
+                        onClick={() => setNav(true)}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        className={style.link}
+                        to="Home"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        spy={false}
+                        smooth={true}
+                        onClick={() => setNav(true)}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        className={style.link}
+                        to="About"
+                    >
+                        About
+                    </Link>
+                    <Link
+                        spy={false}
+                        smooth={true}
+                        onClick={() => setNav(true)}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        className={style.link}
+                        to="Services"
+                    >
+                        Services
+                    </Link>
+                    <Link
+                        spy={false}
+                        smooth={true}
+                        onClick={() => setNav(true)}
+                        offset={0}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        className={style.link}
+                        to="Blogs"
+                    >
+                        Blogs
+                    </Link>
+                </div>
+                <div className={style.hamburger}>
                     <button
                         className={nav ? style.btn : style.active}
                         onClick={() => {

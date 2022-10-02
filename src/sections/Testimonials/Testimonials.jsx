@@ -6,15 +6,13 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
-import { BsFillChatQuoteFill } from "react-icons/bs"
+import { BsFillChatQuoteFill } from "react-icons/bs";
 
 import { useTestimonials } from "../../queries";
-
 
 const Testimonials = () => {
     const testimonials = useTestimonials();
     if (testimonials.isLoading) return null;
-    console.log(testimonials);
     return (
         <section className={style.testimonials}>
             <Swiper
@@ -38,7 +36,7 @@ const Testimonials = () => {
                 {testimonials.data.map((item) => (
                     <SwiperSlide className={style.slide}>
                         <BsFillChatQuoteFill />
-                        <p dangerouslySetInnerHTML={{__html:item.body}}></p>
+                        <p dangerouslySetInnerHTML={{ __html: item.body }}></p>
                         <h5>{item.user_name}</h5>
                         <h6>{item.user_designation}</h6>
                     </SwiperSlide>
@@ -49,4 +47,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-

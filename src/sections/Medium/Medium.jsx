@@ -12,7 +12,6 @@ import { useArticles } from "../../queries";
 const Medium = () => {
     const articles = useArticles();
     if (articles.isLoading) return null;
-    console.log(articles.data);
     return (
         <section className={style.medium}>
             <Swiper
@@ -54,4 +53,3 @@ const Medium = () => {
 };
 
 export default Medium;
-
