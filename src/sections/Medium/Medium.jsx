@@ -21,7 +21,7 @@ const Medium = () => {
                     className={style.swiper + " " + "mySwiper"}
                     effect={"coverflow"}
                     grabCursor={false}
-                    centeredSlides={true}
+                    centeredSlides={false}
                     slidesPerView={"auto"}
                     autoplay={{
                         delay: 2500,
@@ -41,13 +41,13 @@ const Medium = () => {
                                 <img src={item.banner} />
                             </div>
                             <h5>{item.title}</h5>
-                            <h6>
+                            {/*<h6>
                                 {item.tags.reduce(
                                     (prev, cur) => prev + " " + cur,
                                     ""
                                 )}
                             </h6>
-                            <p>{item.level}</p>
+                            <p>{item.level}</p> */}
                         </SwiperSlide>
                     ))}
                 </Swiper>
