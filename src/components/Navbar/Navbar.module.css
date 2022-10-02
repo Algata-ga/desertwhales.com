@@ -5,8 +5,9 @@
 
     background-color: rgba(0, 0, 0, 0.9);
     background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
 
-    position: relative;
+    position: fixed;
     display: flex;
     align-items: center;
     z-index: 3;
