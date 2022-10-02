@@ -24,6 +24,10 @@ background: rgb(15, 15, 15);
     line-height: 1.5rem;
 
 }
+.card img{
+    width: 150px;
+    margin-bottom: 10px;
+}
 @media (max-width:576px) {
     .card{
         margin: 25px ;
