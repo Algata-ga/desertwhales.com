@@ -4,7 +4,11 @@
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    background: linear-gradient(180deg, #101010 0%, #121212 100%);
+background: rgb(15, 15, 15);
+    background: -moz-linear-gradient(180deg, rgba(15, 15, 15, 1) 0%, rgba(19, 19, 19, 1) 47%, rgba(33, 33, 33, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(15, 15, 15, 1) 0%, rgba(19, 19, 19, 1) 47%, rgba(33, 33, 33, 1) 100%);
+    background: linear-gradient(180deg, rgba(15, 15, 15, 1) 0%, rgba(19, 19, 19, 1) 47%, rgba(33, 33, 33, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f0f0f", endColorstr="#212121", GradientType=1);
     border-radius: 25px 25px 0px 0px;
     text-align: center;
     border-top:  2px solid #3a3a3a;
