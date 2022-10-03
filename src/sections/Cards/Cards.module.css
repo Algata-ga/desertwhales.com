@@ -12,28 +12,8 @@
 .cardcontainer{
     height: auto;
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    grid-gap: 30px;
-    grid-template-columns: repeat(3, minmax(300px, 350px));
-}
-@media (max-width: 992px) {
-    .cardcontainer{
-        grid-template-columns: repeat(2, minmax(350px, 350px));
-        justify-content: center;
-    }
-}
-@media (max-width: 768px) {
-    .cardcontainer{
-        grid-template-columns: repeat(1, minmax(350px, 400px));
-        justify-content: center;
 
-    }
-}
-@media (max-width: 350px) {
-    .cardcontainer{
-        grid-template-columns: repeat(1, minmax(300px, 500px));
-        justify-content: center;
-
-    }
 }
