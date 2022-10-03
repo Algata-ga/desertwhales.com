@@ -7,7 +7,8 @@ const customStyles = {
     content: {
         display: "flex",
         flexDirection: "column",
-        height: "fit-content",
+        height: "min(100vh,58vh)",
+        justifyContent: "start",
         alignSelf: "center",
         top: "50%",
         left: "50%",
