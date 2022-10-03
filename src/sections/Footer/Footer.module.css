@@ -72,7 +72,7 @@ input {
     border: none;
 }
 
-.subscribe button {
+.subscribe input[type="submit"] {
     padding: 0 10px;
     border: none;
     background: #ca9e66;
