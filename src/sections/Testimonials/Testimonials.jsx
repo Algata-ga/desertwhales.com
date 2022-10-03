@@ -32,8 +32,8 @@ const Testimonials = () => {
                 }}
                 modules={[Autoplay, EffectCoverflow, Pagination]}
             >
-                {testimonials.data.map((item) => (
-                    <SwiperSlide className={style.slide}>
+                {testimonials.data.map((item,index) => (
+                    <SwiperSlide className={style.slide} key={index} >
                         <div className={style.holder}>
                             <img
                                 className={style.profile}
