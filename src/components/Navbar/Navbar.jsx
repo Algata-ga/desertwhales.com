@@ -80,7 +80,7 @@ const Navbar = () => {
                         spy={false}
                         smooth={true}
                         onClick={() => setNav(true)}
-                        offset={0}
+                        offset={-10}
                         duration={500}
                         delay={250}
                         isDynamic={true}
