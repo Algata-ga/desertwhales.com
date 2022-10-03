@@ -44,7 +44,6 @@ const Testimonials = () => {
                                 className={style.company}
                                 src={item.logo}
                                 alt={item.user_name}
-                                height="30"
                             />
                         </div>
                         <p className={style.p} dangerouslySetInnerHTML={{ __html: item.body }}></p>
