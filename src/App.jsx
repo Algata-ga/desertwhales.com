@@ -1,15 +1,13 @@
 import { Navbar, Sidebar } from "./components";
 import {
     Section1,
-    Partner,
     Service,
     Cards,
     Portfolio,
-    Medium,
     Footer,
     KOIMap,
     Testimonials,
-    Heading
+    Heading,
 } from "./sections";
 import { Element } from "react-scroll";
 import AnimatedCursor from "react-animated-cursor";
@@ -74,12 +72,11 @@ function App() {
                 <Portfolio />
             </Element>
             <Element name="Testimonials">
-                <Heading title="Testimonials" desc="Have a Look at what other people have to say about desert whales." />
+                <Heading
+                    title="Testimonials"
+                    desc="Have a Look at what other people have to say about desert whales."
+                />
                 <Testimonials />
-            </Element>
-            <Element name="Blogs">
-                <Heading title="Our academy articles" desc="Here you find our latest articles" />
-                <Medium />
             </Element>
             <Footer />
         </>

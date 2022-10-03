@@ -50,7 +50,7 @@ const Navbar = () => {
                     >
                         Home
                     </Link>
-                    
+
                     <Link
                         spy={false}
                         smooth={true}
@@ -89,19 +89,6 @@ const Navbar = () => {
                         to="Testimonials"
                     >
                         Testimonials
-                    </Link>
-                    <Link
-                        spy={false}
-                        smooth={true}
-                        onClick={() => setNav(true)}
-                        offset={-10}
-                        duration={500}
-                        delay={250}
-                        isDynamic={true}
-                        className={style.link}
-                        to="Blogs"
-                    >
-                        Blogs
                     </Link>
                 </div>
                 <div className={style.hamburger}>
