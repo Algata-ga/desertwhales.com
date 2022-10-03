@@ -37,12 +37,12 @@ const Testimonials = () => {
                     <SwiperSlide className={style.slide}>
                         <img
                             className={style.profile}
-                            src={item.logo}
+                            src={item.user_image}
                             alt={item.user_name}
                         />
                         <img
                             className={style.company}
-                            src={item.user_image}
+                            src={item.logo}
                             alt={item.user_name}
                             height="30"
                         />

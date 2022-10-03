@@ -41,6 +41,7 @@
     align-items: center;
     justify-content: center;
     align-self: center;
+    max-width: 100%;
 }
 .profile {
     width: 50px;
