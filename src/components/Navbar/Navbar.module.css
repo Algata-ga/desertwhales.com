@@ -10,55 +10,73 @@
     align-items: center;
     z-index: 3;
     justify-content: center;
-    
+
 }
+
 .dflex {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo img {
     height: 60px;
     width: auto;
 }
-.links,.open,.close {
+
+.links,
+.open,
+.close {
     position: relative;
     color: white;
     width: 80%;
     display: flex;
     justify-content: flex-end !important;
 }
+
 .hamburger {
     color: #ffffff;
     display: none;
     justify-content: flex-end;
 }
+
 .link {
     margin: 0 20px;
     text-decoration: none;
     color: white;
     font-weight: 600;
 }
+
 .link:hover {
     color: #c89d66;
 }
 
+@media (max-width: 992px) {
+    .link {
+        margin: 0 15px;
+    }
+}
+
 @media (max-width: 768px) {
-    .header{
+    .header {
         height: 70px;
     }
+
     .logo img {
         height: 45px;
         width: auto;
     }
+
     .links {
         background: #121212dc;
         backdrop-filter: blur(2px);
     }
+
     .link {
         margin: 2rem;
     }
-    .close{
+
+    .close {
         position: absolute;
         width: 100%;
         left: 0;
@@ -75,8 +93,9 @@
         flex-direction: column;
 
     }
-    .open{
-        
+
+    .open {
+
         position: absolute;
         width: 100%;
         height: calc(100vh - 70px);
@@ -93,15 +112,18 @@
         align-items: center;
         justify-content: center !important;
         flex-direction: column;
-        
-        
-        
+
+
+
     }
-    .hamburger{
+
+    .hamburger {
         display: block;
         border: none;
     }
-    .btn,.active{
+
+    .btn,
+    .active {
         background: transparent;
         border: none;
         align-items: center;
@@ -109,7 +131,9 @@
         flex-direction: column;
         display: flex;
     }
-    .btn div,.active div{
+
+    .btn div,
+    .active div {
         width: 20px;
         height: 2px;
         background: #c89d66;
@@ -117,22 +141,24 @@
         position: relative;
         transition: .6s ease;
     }
-    .active div:nth-child(1){
+
+    .active div:nth-child(1) {
         transform: rotate(45deg);
-        top:  8px;
+        top: 8px;
         transition: .6s ease;
 
     }
-    .active div:nth-child(2){
-        opacity:  0;
+
+    .active div:nth-child(2) {
+        opacity: 0;
         transition: .6s ease;
 
     }
-    .active div:nth-child(3){
+
+    .active div:nth-child(3) {
         transform: rotate(-45deg);
-        bottom:  8px;
+        bottom: 8px;
         transition: .6s ease;
 
     }
 }
-

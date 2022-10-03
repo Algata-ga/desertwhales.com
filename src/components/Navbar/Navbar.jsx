@@ -50,19 +50,7 @@ const Navbar = () => {
                     >
                         Home
                     </Link>
-                    <Link
-                        spy={false}
-                        smooth={true}
-                        onClick={() => setNav(true)}
-                        offset={0}
-                        duration={500}
-                        delay={250}
-                        isDynamic={true}
-                        className={style.link}
-                        to="About"
-                    >
-                        About
-                    </Link>
+                    
                     <Link
                         spy={false}
                         smooth={true}
@@ -75,6 +63,32 @@ const Navbar = () => {
                         to="Services"
                     >
                         Services
+                    </Link>
+                    <Link
+                        spy={false}
+                        smooth={true}
+                        onClick={() => setNav(true)}
+                        offset={-100}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        className={style.link}
+                        to="Portfolio"
+                    >
+                        Portfolio
+                    </Link>
+                    <Link
+                        spy={false}
+                        smooth={true}
+                        onClick={() => setNav(true)}
+                        offset={-100}
+                        duration={500}
+                        delay={250}
+                        isDynamic={true}
+                        className={style.link}
+                        to="Testimonials"
+                    >
+                        Testimonials
                     </Link>
                     <Link
                         spy={false}
