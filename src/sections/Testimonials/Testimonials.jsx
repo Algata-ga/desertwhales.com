@@ -35,12 +35,21 @@ const Testimonials = () => {
             >
                 {testimonials.data.map((item) => (
                     <SwiperSlide className={style.slide}>
-                        <img className={style.profile} src={item.logo} alt={item.user_name} />
-                        <img className={style.company} src={item.logo} alt={item.user_name} height="30" />
+                        <img
+                            className={style.profile}
+                            src={item.logo}
+                            alt={item.user_name}
+                        />
+                        <img
+                            className={style.company}
+                            src={item.user_image}
+                            alt={item.user_name}
+                            height="30"
+                        />
                         <h5>{item.user_name}</h5>
                         <h6>{item.user_designation}</h6>
-                        
-                        <p dangerouslySetInnerHTML={{__html:item.body}}></p>
+
+                        <p dangerouslySetInnerHTML={{ __html: item.body }}></p>
                     </SwiperSlide>
                 ))}
             </Swiper>

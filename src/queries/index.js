@@ -70,14 +70,17 @@ const fetchTestimonials = async () => {
     const data = await response.json();
     console.log("hi");
     console.log(data);
-    const parsedData = data.map(({ body, user_name, user_designation,logo }) => {
-        return {
-            body,
-            user_name,
-            user_designation,
-            logo: `${import.meta.env.VITE_BASE_API_URL}${logo}`
-        };
-    });
+    const parsedData = data.map(
+        ({ body, user_name, user_image, user_designation, logo }) => {
+            return {
+                body,
+                user_name,
+                user_designation,
+                logo: `${import.meta.env.VITE_BASE_API_URL}${logo}`,
+                user_image: `${import.meta.env.VITE_BASE_API_URL}${user_image}`,
+            };
+        }
+    );
     return parsedData;
 };
 
