@@ -70,7 +70,9 @@ function App() {
                 <Cards />
             </Element>
             <KOIMap />
-            <Portfolio />
+            <Element name="Portfolio">
+                <Portfolio />
+            </Element>
             <Element name="Testimonials">
                 <Heading title="Testimonials" desc="Have a Look at what other people have to say about desert whales." />
                 <Testimonials />
