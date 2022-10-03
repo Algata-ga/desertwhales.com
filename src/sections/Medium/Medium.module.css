@@ -26,6 +26,9 @@
         padding-bottom: 10px;
 
 }
+.slide a{
+    text-decoration: none;
+}
 .slide .imgbox{
     height: 100%;
     width: 100%;
