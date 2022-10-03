@@ -105,7 +105,7 @@ const Footer = () => {
                         <Link
                             spy={false}
                             smooth={true}
-                            offset={0}
+                            offset={-125}
                             duration={500}
                             delay={250}
                             isDynamic={true}
