@@ -77,8 +77,8 @@ function App() {
                 <Heading title="Testimonials" desc="Have a Look at what other people have to say about desert whales." />
                 <Testimonials />
             </Element>
-            <Heading title="Our academy articles" desc="Here you find our latest articles" />
             <Element name="Blogs">
+                <Heading title="Our academy articles" desc="Here you find our latest articles" />
                 <Medium />
             </Element>
             <Footer />
