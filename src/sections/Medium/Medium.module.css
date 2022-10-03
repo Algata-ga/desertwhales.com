@@ -9,13 +9,24 @@
     background: #121212 !important;
 }
 
+.loader {
+    width: max(20rem, 321px);
+    height: 325px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #121212;
+    margin: 0 30px;
+    padding-bottom: 10px;
+}
+
 .swiper {
     height: 80%;
     width: 100%;
 }
 
 .slide {
-    width: max(20rem,321px);
+    width: max(20rem, 321px);
     height: 325px !important;
     display: flex;
     align-items: stretch;
@@ -74,7 +85,8 @@
     margin: auto !important;
     color: #828282;
 }
-.slide p{
+
+.slide p {
     max-width: 95%;
     margin: auto;
     color: #828282;

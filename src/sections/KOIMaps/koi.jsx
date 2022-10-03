@@ -3,7 +3,8 @@ import { useState } from "react";
 import ReactTooltip from "react-tooltip";
 import { useKOIs } from "../../queries";
 import style from "./koi.module.css";
-
+import { Waveform } from '@uiball/loaders'
+import { Container } from "react-bootstrap";
 const KOIMap = () => {
     const markers = useKOIs();
     const [content, setContent] = useState("");
@@ -14,7 +15,18 @@ const KOIMap = () => {
     };
 
     if (markers.isLoading) {
-        return <h4>Loading</h4>;
+        return <Container>
+            <div style={{ width: "100%", aspectRatio: "8/6", display: "flex", justifyContent: "center", background: "#121212" }}>
+                <div className={style.loader}>
+                    <Waveform
+                        size={40}
+                        lineWeight={3.5}
+                        speed={1}
+                        color="#BD9560"
+                    />
+                </div>
+            </div>
+        </Container> ;
     }
     return (
         <section>

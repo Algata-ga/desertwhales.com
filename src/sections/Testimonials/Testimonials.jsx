@@ -8,10 +8,21 @@ import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 
 import { useTestimonials } from "../../queries";
+import { Waveform } from '@uiball/loaders'
+
 
 const Testimonials = () => {
     const testimonials = useTestimonials();
-    if (testimonials.isLoading) return null;
+    if (testimonials.isLoading) return <div style={{width:"100%",display:"flex",justifyContent:"center",background:"#121212"}}>
+        <div className={style.loader}>
+            <Waveform
+                size={40}
+                lineWeight={3.5}
+                speed={1}
+                color="#BD9560"
+            />
+        </div>
+    </div>;
     return (
         <section className={style.testimonials}>
             <Swiper

@@ -1,4 +1,5 @@
 import style from "./Portfolio.module.css";
+import { Waveform } from '@uiball/loaders'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,7 +19,16 @@ const chunk = (arr, size) =>
 const Portfolio = () => {
     const portfolios = usePortfolios();
     if (portfolios.isLoading) {
-        return <h3>Loading</h3>;
+        return <div style={{ width: "100%", aspectRatio:"2/1" , display: "flex", justifyContent: "center", background: "#121212" }}>
+            <div className={style.loader}>
+                <Waveform
+                    size={40}
+                    lineWeight={3.5}
+                    speed={1}
+                    color="#BD9560"
+                />
+            </div>
+        </div>;
     }
     return (
         <section className={style.folio}>
