@@ -1,3 +1,7 @@
+const mediaQueryList = window.matchMedia("only screen and (max-width: 600px)");
+
+const particles_count = mediaQueryList.matches ? 15 : 50;
+
 const options = {
     preset: "triangles",
     fullScreen: { enable: false },
@@ -51,7 +55,7 @@ const options = {
                 enable: true,
                 area: 800,
             },
-            value: 50,
+            value: particles_count,
         },
         opacity: {
             value: 0.3,
