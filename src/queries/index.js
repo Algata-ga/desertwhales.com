@@ -57,7 +57,6 @@ const fetchArticles = async () => {
         `${import.meta.env.VITE_ACADEMY_URL}/api/articles/latest`
     );
     const data = await response.json();
-
     return data;
 };
 
@@ -68,8 +67,6 @@ const fetchTestimonials = async () => {
         `${import.meta.env.VITE_BASE_API_URL}/api/testimonials?_format=json`
     );
     const data = await response.json();
-    console.log("hi");
-    console.log(data);
     const parsedData = data.map(
         ({ body, user_name, user_image, user_designation, logo }) => {
             return {
