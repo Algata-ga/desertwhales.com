@@ -51,8 +51,9 @@
     border: none;
     transition: 0.2s ease-in-out;
     padding: 5px 10px;
-    background: #fff;
-    color: #737373;
+    background: #dddbdbad;
+    color: #212121;
+    font-weight: 400;
 }
 .form input:focus{
     outline: solid 2px #d0a269;
