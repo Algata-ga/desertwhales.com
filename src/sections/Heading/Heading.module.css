@@ -2,7 +2,7 @@
     width: 100%;
     padding: 3rem 0;
     position: relative;
-    background: white !important;
+    background: #121212 !important;
 }
 .contentbox{
     width: 100%;
@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: #fff;
     flex-direction: column;
     text-align: center;
     z-index: 2;
