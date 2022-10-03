@@ -1,4 +1,4 @@
-.medium{
+.medium {
     width: 100%;
     height: max-content;
     position: relative;
@@ -8,11 +8,13 @@
     padding-bottom: 5rem;
     background: white !important;
 }
-.swiper{
+
+.swiper {
     height: 80%;
     width: 100%;
 }
-.slide{
+
+.slide {
     width: 20rem;
     display: flex;
     align-items: stretch;
@@ -22,14 +24,16 @@
     margin: 0 15px;
     overflow: hidden;
     background: linear-gradient(180deg, #FFFFFF 0%, #F0F0F0 100%);
-        border-radius: 13px;
-        padding-bottom: 10px;
+    border-radius: 13px;
+    padding-bottom: 10px;
 
 }
-.slide a{
+
+.slide a {
     text-decoration: none;
 }
-.slide .imgbox{
+
+.slide .imgbox {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -37,13 +41,16 @@
     margin-top: 8px;
 
 }
-.slide img{
+
+.slide img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
 }
-.slide h5,.slide p{
+
+.slide h5,
+.slide p {
     width: 100%;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -56,32 +63,42 @@
     margin: 5px 0;
     text-align: center;
 }
-.slide h5{
+
+.slide h5 {
     font-weight: bold;
     color: #000;
     margin-top: 1rem;
 }
-.slide h6{
+
+.slide h6 {
     margin: auto !important;
     color: #828282;
 }
+.slide p{
+    max-width: 95%;
+    margin: auto;
+    color: #828282;
+}
+
 @media (max-width:992px) {
-    .slide{
+    .slide {
         width: 33%;
-        margin:  0 10px ;
+        margin: 0 10px;
 
     }
 }
+
 @media (max-width:768px) {
-    .slide{
+    .slide {
         width: 70%;
-        margin:  0 10px ;
+        margin: 0 10px;
 
     }
 }
+
 @media (max-width:576px) {
-    .slide{
-        
+    .slide {
+
         width: 100%;
         margin: 5px;
     }

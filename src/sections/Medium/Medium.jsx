@@ -50,8 +50,8 @@ const Medium = () => {
                                     (prev, cur) => prev + " " + cur,
                                     ""
                                 )}
-                            </h6>
-                            <p>{item.level}</p> */}
+                            </h6>*/}
+                            <p>{item.body}</p> 
                             </a>
                         </SwiperSlide>
                     ))}
