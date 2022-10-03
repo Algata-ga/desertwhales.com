@@ -7,6 +7,31 @@ import { Link } from "react-scroll";
 
 const date = new Date();
 const year = date.getFullYear();
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = {
+        email: e.target[0].value,
+    };
+    const google_script_url = import.meta.env.VITE_LETTER_URL;
+    const encodedUrl =
+        google_script_url +
+        Object.keys(formData).reduce(
+            (prev, cur) => prev + `${cur}=${formData[cur]}&`,
+            "?"
+        );
+
+    try {
+        await fetch(encodedUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+    } catch (err) {
+        alert("Sending failed.");
+        window.location.reload();
+    }
+};
 
 const Footer = () => {
     return (
@@ -145,14 +170,17 @@ const Footer = () => {
                             <FaTelegramPlane className={style.link} />
                         </a>
                     </div>
-                    <div className={style.subscribe}>
+                    <form className={style.subscribe} onSubmit={(e) => {
+                        handleSubmit(e);
+                    }}>
                         <h6>Lets do it</h6>
                         <input
-                            type="text"
+                            type="email"
+                            name="email"
                             placeholder="Subscribe to newsletter"
                         />
-                        <button>Submit</button>
-                    </div>
+                        <input type="submit" value="Submit" />
+                    </form>
                 </div>
             </div>
             <div className={style.line}></div>
