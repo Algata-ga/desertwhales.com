@@ -7,7 +7,7 @@ const customStyles = {
     content: {
         display: "flex",
         flexDirection: "column",
-        height: "min(100vh,58vh)",
+        height: "fit-content",
         justifyContent: "start",
         alignSelf: "center",
         top: "50%",
@@ -74,15 +74,6 @@ const ContactPopUp = ({ state, close }) => {
                     }}
                 >
                     <label htmlFor="">
-                        Name
-                        <input
-                            type="text"
-                            name="name"
-                            id=""
-                            placeholder="Name"
-                        />
-                    </label>
-                    <label htmlFor="">
                         Email
                         <input
                             type="email"
@@ -93,11 +84,7 @@ const ContactPopUp = ({ state, close }) => {
                     </label>
                     <label htmlFor="">
                         Message
-                        <input
-                            type="text"
-                            name="message"
-                            placeholder="Message"
-                        />
+                        <textarea name="message" rows="2" placeholder="Message"></textarea>
                     </label>
                     <input type="submit" value="Send" />
                 </form>
