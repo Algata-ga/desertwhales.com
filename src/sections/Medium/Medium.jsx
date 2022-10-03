@@ -36,17 +36,23 @@ const Medium = () => {
                 >
                     {articles.data.map((item) => (
                         <SwiperSlide className={style.slide}>
-                            <div className={style.imgbox}>
-                                <img src={item.banner} />
-                            </div>
-                            <h5>{item.title}</h5>
-                            {/*<h6>
+                            <a
+                                href={`${
+                                    import.meta.env.VITE_ACADEMY_URL
+                                }/article/${item.title.replaceAll(" ", "_")}`}
+                            >
+                                <div className={style.imgbox}>
+                                    <img src={item.banner} />
+                                </div>
+                                <h5>{item.title}</h5>
+                                {/*<h6>
                                 {item.tags.reduce(
                                     (prev, cur) => prev + " " + cur,
                                     ""
                                 )}
                             </h6>
                             <p>{item.level}</p> */}
+                            </a>
                         </SwiperSlide>
                     ))}
                 </Swiper>
