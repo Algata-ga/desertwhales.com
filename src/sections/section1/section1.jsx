@@ -2,14 +2,15 @@ import style from "./Section1.module.css";
 import { Container } from "react-bootstrap";
 import bg from "../../assets/ette-ai-svg.svg";
 import linebg from "../../assets/lines home.svg";
-
+import { ContactPopUp } from "../../components";
 import Particles from "react-tsparticles";
 import options from "./particlesConfig.js";
-
+import { useToggle } from "react-use";
 const Section1 = () => {
     const particlesInit = (main) => {
         return null;
     };
+    const [isOpen, toggleOpen] = useToggle(false);
 
     const particlesLoaded = (container) => {
         return null;
@@ -32,9 +33,8 @@ const Section1 = () => {
                         </h6>
                         <div className={style.btns}>
                             <a>
-                                <button className={style.contact}>
-                                    Contact us
-                                </button>
+                                <button className={style.contact} onClick={toggleOpen}>Contact Us</button>
+                                <ContactPopUp state={isOpen} close={toggleOpen} />
                             </a>
                             <a href="#">
                                 <a
@@ -58,7 +58,7 @@ const Section1 = () => {
                 height="max(866px, 100vh)"
                 options={options}
                 style={{ top: "100px", zIndex: "-1", position: "absolute" }}
-            /> 
+            />
         </>
     );
 };
