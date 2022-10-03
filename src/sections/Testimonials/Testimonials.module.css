@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 5rem;
-    background: white !important;
+    background: #121212 !important;
 }
 
 .swiper {
@@ -25,9 +25,9 @@
     margin: 0 15px;
     overflow: hidden;
     padding: 8px;
-    background: linear-gradient(180deg, rgba(240, 240, 240, 0.65) 0%, rgba(240, 240, 240, 0.65) 43.23%);
-    border-radius: 13px;
+    background: #212020;
     margin: 0 30px;
+    border-radius: 13px;
 }
 
 .slide a {
@@ -79,7 +79,7 @@
     width: 100%;
     font-family: 'Poppins', sans-serif;
     text-align: right;
-    color: #000;
+    color: #C89D65;
     font-weight: bold;
     text-align: right;
     padding-right: 8px;
@@ -89,13 +89,14 @@
     font-size: 1.05rem;
     margin-top: 5px;
 }
+
 .slide h6 {
     font-size: 0.9rem;
 }
 
 
 
-.p{
+.p {
     text-align: center;
     margin-top: 5px;
     display: -webkit-box;
