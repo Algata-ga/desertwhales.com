@@ -27,6 +27,10 @@ const handleSubmit = async (e) => {
                 "Content-Type": "application/x-www-form-urlencoded",
             },
         });
+        e.target[0].value = null;
+        e.target[0].placeholder = "You have subscribed";
+        e.target[1].value = "Subscribed";
+        e.target[1].disabled = true;
     } catch (err) {
         alert("Sending failed.");
         window.location.reload();
@@ -170,16 +174,19 @@ const Footer = () => {
                             <FaTelegramPlane className={style.link} />
                         </a>
                     </div>
-                    <form className={style.subscribe} onSubmit={(e) => {
-                        handleSubmit(e);
-                    }}>
+                    <form
+                        className={style.subscribe}
+                        onSubmit={(e) => {
+                            handleSubmit(e);
+                        }}
+                    >
                         <h6>Lets do it</h6>
                         <input
                             type="email"
                             name="email"
                             placeholder="Subscribe to newsletter"
                         />
-                        <input type="submit" value="Submit" />
+                        <input type="submit" value="Subscribe" />
                     </form>
                 </div>
             </div>
