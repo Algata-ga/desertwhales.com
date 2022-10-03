@@ -15,16 +15,24 @@
 }
 
 .slide {
-    width: min(30rem, 100%);
+    width: min(375px, 100%);
+    min-height: 260px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     color: #828282;
     margin: 0 15px;
     overflow: hidden;
-    padding: 0 5px;
+    padding: 8px;
+    background: linear-gradient(180deg, rgba(240, 240, 240, 0.65) 0%, rgba(240, 240, 240, 0.65) 43.23%);
+    border-radius: 13px;
+    margin: 0 30px;
+}
 
+.slide a {
+    align-self: center;
+    position: relative;
 }
 
 .slide svg {
@@ -36,17 +44,26 @@
     color: #BD9560;
 }
 
+.holder {
+    width: 93%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .company {
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: center;
-    max-width: 100%;
+    max-width: 70%;
+    max-height: 32px;
     filter: drop-shadow(0px 0px 8px #BD9560);
 }
 
 .profile {
-    width: 50px;
+    width: 41px;
     border-radius: 50%;
     margin-bottom: 10px;
     aspect-ratio: 1/1;
@@ -56,49 +73,61 @@
     align-self: center;
 }
 
+
+
 .slide h5,
 .slide h6 {
-    width: 80%;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
-    margin: 5px 0;
     text-align: right;
-    color: #BD9560;
+    color: #000;
     font-weight: bold;
-    text-align: center;
+    text-align: right;
+    padding-right: 8px;
 }
 
 .slide h5 {
-    margin-top: 1rem;
     font-size: 1.1rem;
 }
-
 .slide h6 {
-    margin: auto !important;
-
+    font-size: 0.9rem;
 }
 
-.slide p {
+
+
+.p{
     text-align: center;
     margin-top: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+    margin-bottom: 5px;
+    height: 12ch;
+    padding: 0 5px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
 }
 
 @media (max-width:992px) {
     .slide {
-        width: 60%;
-        margin: 0 10px;
+        margin: 0 15px;
     }
 }
 
 @media (max-width:768px) {
     .slide {
-        width: 70%;
-        margin: 0 10px;
+        margin: 0 20px !important;
     }
 }
 
 @media (max-width:576px) {
     .slide {
         margin: 0 5px;
-        width: 90%;
     }
 }
