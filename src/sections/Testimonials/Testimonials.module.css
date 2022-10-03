@@ -59,7 +59,6 @@
     align-self: center;
     max-width: 70%;
     max-height: 32px;
-    filter: drop-shadow(0px 0px 8px #BD9560);
 }
 
 .profile {
@@ -87,7 +86,8 @@
 }
 
 .slide h5 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    margin-top: 5px;
 }
 .slide h6 {
     font-size: 0.9rem;
@@ -112,6 +112,7 @@
     padding-top: 10px;
     box-sizing: border-box;
     font-size: 15px;
+    font-size: 1.05rem;
 }
 
 @media (max-width:992px) {
