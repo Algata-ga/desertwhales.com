@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 5rem;
-    background: white !important;
+    background: #121212 !important;
 }
 
 .swiper {
@@ -16,7 +16,7 @@
 
 .slide {
     width: max(20rem,321px);
-    height: 331px !important;
+    height: 325px !important;
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -24,8 +24,8 @@
     color: #828282;
     margin: 0 30px;
     overflow: hidden;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F0F0F0 100%);
-    border-radius: 13px;
+    background: #212020;
+    border-radius: 26px 26px 13px 13px;
     padding-bottom: 10px;
 
 }
@@ -37,10 +37,10 @@
 .slide .imgbox {
     max-height: 193px;
     width: 100%;
-    overflow: hidden;
     border-radius: 26px;
-    margin-top: 8px;
-
+    position: relative;
+    top: -15px;
+    overflow: hidden;
 }
 
 .slide img {
@@ -67,8 +67,7 @@
 
 .slide h5 {
     font-weight: bold;
-    color: #000;
-    margin-top: 1rem;
+    color: #fff;
 }
 
 .slide h6 {
