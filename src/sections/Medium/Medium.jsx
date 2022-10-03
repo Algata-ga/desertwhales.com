@@ -34,8 +34,8 @@ const Medium = () => {
                     }}
                     modules={[Autoplay, EffectCoverflow, Pagination]}
                 >
-                    {articles.data.map((item) => (
-                        <SwiperSlide className={style.slide}>
+                    {articles.data.map((item, index) => (
+                        <SwiperSlide className={style.slide} key={index}>
                             <a
                                 href={`${
                                     import.meta.env.VITE_ACADEMY_URL
@@ -45,13 +45,7 @@ const Medium = () => {
                                     <img src={item.banner} />
                                 </div>
                                 <h5>{item.title}</h5>
-                                {/*<h6>
-                                {item.tags.reduce(
-                                    (prev, cur) => prev + " " + cur,
-                                    ""
-                                )}
-                            </h6>*/}
-                            <p>{item.body}</p> 
+                                <p>{item.body}</p>
                             </a>
                         </SwiperSlide>
                     ))}

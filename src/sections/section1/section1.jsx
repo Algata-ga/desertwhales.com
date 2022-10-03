@@ -18,7 +18,7 @@ const Section1 = () => {
     return (
         <>
             <div className={style.lines}>
-                <img src={linebg} alt="" srcset="" />
+                <img src={linebg} alt="" />
             </div>
             <section className={style.section1}>
                 <Container className={style.main}>

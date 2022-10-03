@@ -76,7 +76,7 @@ const MapChart = ({ setTooltipContent, markers }) => {
                         ))
                     }
                 </Geographies>
-                {markers.map((loc) => (
+                {markers.map((loc, index) => (
                     <Marker
                         key={loc.id}
                         coordinates={loc.coordinates}
@@ -86,6 +86,7 @@ const MapChart = ({ setTooltipContent, markers }) => {
                         onMouseLeave={() => {
                             setTooltipContent("");
                         }}
+                        key={index}
                     >
                         <CustomMarker name={loc.name} />
                     </Marker>

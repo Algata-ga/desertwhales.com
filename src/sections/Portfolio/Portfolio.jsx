@@ -42,10 +42,10 @@ const Portfolio = () => {
                     }}
                     modules={[Autoplay, EffectCoverflow, Pagination]}
                 >
-                    {chunk(portfolios.data, 9).map((slide) => (
-                        <SwiperSlide className={style.slide}>
-                            {slide.map((item) => (
-                                <div className={style.img}>
+                    {chunk(portfolios.data, 9).map((slide, index) => (
+                        <SwiperSlide className={style.slide} key={index}>
+                            {slide.map((item, index) => (
+                                <div className={style.img} key={index}>
                                     <a className={style.a} href={item.link}>
                                         <img src={item.image} alt={item.name} />
                                     </a>
