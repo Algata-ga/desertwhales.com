@@ -33,16 +33,22 @@ const Section1 = () => {
                         </h6>
                         <div className={style.btns}>
                             <a>
-                                <button className={style.contact} onClick={toggleOpen}>Contact Us</button>
-                                <ContactPopUp state={isOpen} close={toggleOpen} />
-                            </a>
-                            <a href="#">
-                                <a
-                                    href="academy.desertwhales.com"
-                                    className={style.academybtn}
+                                <button
+                                    className={style.contact}
+                                    onClick={toggleOpen}
                                 >
-                                    Academy
-                                </a>
+                                    Contact Us
+                                </button>
+                                <ContactPopUp
+                                    state={isOpen}
+                                    close={toggleOpen}
+                                />
+                            </a>
+                            <a
+                                href={import.meta.env.VITE_ACADEMY_URL}
+                                className={style.academybtn}
+                            >
+                                Academy
                             </a>
                         </div>
                     </div>

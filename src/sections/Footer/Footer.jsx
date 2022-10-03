@@ -124,7 +124,10 @@ const Footer = () => {
                         >
                             Testimonials
                         </Link>
-                        <a className={style.a} href="#">
+                        <a
+                            className={style.a}
+                            href={import.meta.env.VITE_ACADEMY_URL}
+                        >
                             <li className={style.li}>Academy</li>
                         </a>
                     </div>
@@ -161,4 +164,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
