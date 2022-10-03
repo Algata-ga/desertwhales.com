@@ -29,9 +29,8 @@ const customStyles = {
 const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = {
-        name: e.target[0].value,
-        email: e.target[1].value,
-        message: e.target[2].value,
+        email: e.target[0].value,
+        message: e.target[1].value,
     };
     const google_script_url = import.meta.env.VITE_FORM_URL;
     const encodedUrl =
@@ -73,18 +72,17 @@ const ContactPopUp = ({ state, close }) => {
                         close();
                     }}
                 >
-                    <label htmlFor="">
+                    <label>
                         Email
-                        <input
-                            type="email"
-                            name="email"
-                            id=""
-                            placeholder="Email"
-                        />
+                        <input type="email" name="email" placeholder="Email" />
                     </label>
-                    <label htmlFor="">
+                    <label>
                         Message
-                        <textarea name="message" rows="2" placeholder="Message"></textarea>
+                        <textarea
+                            name="message"
+                            rows="4"
+                            placeholder="Message"
+                        ></textarea>
                     </label>
                     <input type="submit" value="Send" />
                 </form>
