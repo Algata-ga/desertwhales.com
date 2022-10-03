@@ -6,17 +6,9 @@ const options = {
             value: "#0e0e0e",
         },
     },
-    fpsLimit: 120,
+    fpsLimit: 60,
     interactivity: {
         events: {
-            onClick: {
-                enable: false,
-                mode: "push",
-            },
-            onHover: {
-                enable: true,
-                mode: "repulse",
-            },
             resize: true,
         },
         modes: {
