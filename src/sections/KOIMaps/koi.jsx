@@ -14,27 +14,32 @@ const KOIMap = () => {
         return `<div style="font-family: 'Raleway', sans-serif;">${data.description}</div>`;
     };
 
-    if (markers.isLoading) {
-        return <Container>
-            <div style={{ width: "100%", aspectRatio: "8/6", display: "flex", justifyContent: "center", background: "#121212" }}>
-                <div className={style.loader}>
-                    <Waveform
-                        size={40}
-                        lineWeight={3.5}
-                        speed={1}
-                        color="#BD9560"
-                    />
-                </div>
-            </div>
-        </Container> ;
-    }
     return (
         <section>
+            
             <h1 className={style.heading}>KOLs</h1>
-            <MapChart setTooltipContent={setContent} markers={markers.data} />
-            <ReactTooltip html={true} clickable={true}>
-                {toolTipDisplay(content)}
-            </ReactTooltip>
+            {
+                markers.isLoading?
+
+                    <Container>
+                        <div style={{ width: "100%", aspectRatio: "8/6", display: "flex", justifyContent: "center", background: "#121212" }}>
+                            <div className={style.loader}>
+                                <Waveform
+                                    size={40}
+                                    lineWeight={3.5}
+                                    speed={1}
+                                    color="#BD9560"
+                                />
+                            </div>
+                        </div>
+                    </Container>
+                    :
+                    <><MapChart setTooltipContent={setContent} markers={markers.data} />
+                        <ReactTooltip html={true} clickable={true}>
+                            {toolTipDisplay(content)}
+                        </ReactTooltip></>
+            }
+            
         </section>
     );
 };

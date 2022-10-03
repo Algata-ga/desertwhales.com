@@ -18,53 +18,54 @@ const chunk = (arr, size) =>
 
 const Portfolio = () => {
     const portfolios = usePortfolios();
-    if (portfolios.isLoading) {
-        return <div style={{ width: "100%", aspectRatio:"2/1" , display: "flex", justifyContent: "center", background: "#121212" }}>
-            <div className={style.loader}>
-                <Waveform
-                    size={40}
-                    lineWeight={3.5}
-                    speed={1}
-                    color="#BD9560"
-                />
-            </div>
-        </div>;
-    }
     return (
         <section className={style.folio}>
             <h1 className={style.heading}>Portfolio</h1>
-            <div className={style.portfolio}>
-                <Swiper
-                    className={style.swiper + " " + "mySwiper"}
-                    effect={"coverflow"}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    slidesPerView={"auto"}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 0,
-                        modifier: 1,
-                    }}
-                    modules={[Autoplay, EffectCoverflow, Pagination]}
-                >
-                    {chunk(portfolios.data, 9).map((slide, index) => (
-                        <SwiperSlide className={style.slide} key={index}>
-                            {slide.map((item, index) => (
-                                <div className={style.img} key={index}>
-                                    <a className={style.a} href={item.link}>
-                                        <img src={item.image} alt={item.name} />
-                                    </a>
-                                </div>
-                            ))}
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+            {portfolios.isLoading ?
+                <div style={{ width: "100%", aspectRatio: "2/1", display: "flex", justifyContent: "center", background: "#121212" }}>
+                    <div className={style.loader}>
+                        <Waveform
+                            size={40}
+                            lineWeight={3.5}
+                            speed={1}
+                            color="#BD9560"
+                        />
+                    </div>
+                </div>
+                :
+                <div className={style.portfolio}>
+                    <Swiper
+                        className={style.swiper + " " + "mySwiper"}
+                        effect={"coverflow"}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        slidesPerView={"auto"}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
+                        coverflowEffect={{
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 0,
+                            modifier: 1,
+                        }}
+                        modules={[Autoplay, EffectCoverflow, Pagination]}
+                    >
+                        {chunk(portfolios.data, 9).map((slide, index) => (
+                            <SwiperSlide className={style.slide} key={index}>
+                                {slide.map((item, index) => (
+                                    <div className={style.img} key={index}>
+                                        <a className={style.a} href={item.link}>
+                                            <img src={item.image} alt={item.name} />
+                                        </a>
+                                    </div>
+                                ))}
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            }
         </section>
     );
 };
