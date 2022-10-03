@@ -117,7 +117,8 @@ input {
     padding: 0.5rem 0 !important;
     color: white;
 }
-.links a{
+
+.links a {
     margin: 10px;
 }
 
@@ -161,12 +162,13 @@ input {
         align-items: center;
         margin-top: 10px;
     }
-        .logo h6,
-        .quicklink h6,
-        .company h6,
-        .social h6 {
-            font-size: 1.2rem;
-        }
+
+    .logo h6,
+    .quicklink h6,
+    .company h6,
+    .social h6 {
+        font-size: 1.2rem;
+    }
 
 }
 
@@ -174,13 +176,18 @@ input {
     .logo {
         padding: 1rem 0;
     }
-        .logo h6,
-        .quicklink h6,
-        .company h6,
-        .social h6 {
-            font-size: 1.2rem;
-        }
 
+    .logo h6,
+    .quicklink h6,
+    .company h6,
+    .social h6 {
+        font-size: 1.2rem;
+    }
+
+    .subscribe h6{
+        text-align: center;
+        margin-top: 10px;
+    }
     .footer {
         grid-template-areas: "img img ""quick company""social social ";
         justify-items: center;
