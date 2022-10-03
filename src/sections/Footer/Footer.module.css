@@ -66,6 +66,12 @@
 input {
     height: 35px;
     width: 70%;
+    background: #dddbdbad;
+        color: #212121;
+        border: none;
+}
+input:focus{
+    outline: 2px solid #ca9e66;
 }
 
 .input:active {

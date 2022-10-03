@@ -179,7 +179,7 @@ const Footer = () => {
                             name="email"
                             placeholder="Subscribe to newsletter"
                         />
-                        <input type="submit" value="Submit" />
+                        <input type="submit" value="Subscribe" />
                     </form>
                 </div>
             </div>
