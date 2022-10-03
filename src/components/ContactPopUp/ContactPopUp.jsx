@@ -1,7 +1,7 @@
 import Modal from "react-modal";
 import style from "./ContactPopUp.module.css";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 
 const customStyles = {
     content: {
@@ -22,15 +22,40 @@ const customStyles = {
     },
     overlay: {
         zIndex: "10",
-        backgroundColor: "rgba(0, 0, 0, 0.75)"
-    }
+        backgroundColor: "rgba(0, 0, 0, 0.75)",
+    },
 };
 
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = {
+        name: e.target[0].value,
+        email: e.target[1].value,
+        message: e.target[2].value,
+    };
+    const google_script_url = import.meta.env.VITE_FORM_URL;
+    const encodedUrl =
+        google_script_url +
+        Object.keys(formData).reduce(
+            (prev, cur) => prev + `${cur}=${formData[cur]}&`,
+            "?"
+        );
+
+    try {
+        await fetch(encodedUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+    } catch (err) {
+        alert("Sending failed.");
+        window.location.reload();
+    }
+};
 const ContactPopUp = ({ state, close }) => {
-
-
     return (
-        <Modal isOpen={state} style={customStyles}>
+        <Modal isOpen={state} close={close} style={customStyles}>
             <div className={style.formcontain}>
                 <button className={style.close} onClick={close}>
                     <AiOutlineClose />
@@ -41,15 +66,38 @@ const ContactPopUp = ({ state, close }) => {
                 <div className={style.header}>
                     <h2>Contact Us</h2>
                 </div>
-                <form className={style.form} onSubmit={() => { }}>
-                    <label htmlFor="">Name
-                        <input type="text" name="name" id="" placeholder="Name" />
+                <form
+                    className={style.form}
+                    onSubmit={(e) => {
+                        handleSubmit(e);
+                        close();
+                    }}
+                >
+                    <label htmlFor="">
+                        Name
+                        <input
+                            type="text"
+                            name="name"
+                            id=""
+                            placeholder="Name"
+                        />
                     </label>
-                    <label htmlFor="">Email
-                        <input type="email" name="email" id="" placeholder="Email" />
+                    <label htmlFor="">
+                        Email
+                        <input
+                            type="email"
+                            name="email"
+                            id=""
+                            placeholder="Email"
+                        />
                     </label>
-                    <label htmlFor="">Message
-                        <input type="text" name="" id="" placeholder="Message" />
+                    <label htmlFor="">
+                        Message
+                        <input
+                            type="text"
+                            name="message"
+                            placeholder="Message"
+                        />
                     </label>
                     <input type="submit" value="Send" />
                 </form>
