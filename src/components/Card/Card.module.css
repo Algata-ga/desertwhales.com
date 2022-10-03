@@ -12,7 +12,7 @@
     min-height: 20rem;
     padding: 1rem 1rem;
     z-index: 1;
-    width: min(300px, 375px);
+    width: min(350px, 375px);
 }
 
 .card h4 {
@@ -47,6 +47,7 @@
 @media (max-width: 992px) {
     .card {
         margin: 10px;
+        width: min(320px, 375px);
     }
 }
 
