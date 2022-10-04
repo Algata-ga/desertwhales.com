@@ -35,3 +35,16 @@ body {
 .swiper-wrapper {
     align-items: center;
 }
+
+.swiper-pagination{
+    height: 30px !important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.swiper-pagination-bullet{
+    background: #fff !important;
+}
+.swiper-pagination-bullet-active{
+    background: #d0a269 !important;
+}
