@@ -49,6 +49,7 @@ const Medium = () => {
                                 href={`${
                                     import.meta.env.VITE_ACADEMY_URL
                                 }/article/${item.title.replaceAll(" ", "_")}`}
+                            target="blank"
                             >
                                 <div className={style.imgbox}>
                                     <img src={item.banner} />
