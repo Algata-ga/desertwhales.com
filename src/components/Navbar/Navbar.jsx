@@ -81,7 +81,7 @@ const Navbar = () => {
                         spy={false}
                         smooth={true}
                         onClick={() => setNav(true)}
-                        offset={-100}
+                        offset={-50}
                         duration={500}
                         delay={250}
                         isDynamic={true}
@@ -94,7 +94,7 @@ const Navbar = () => {
                         spy={false}
                         smooth={true}
                         onClick={() => setNav(true)}
-                        offset={-10}
+                        offset={-50}
                         duration={500}
                         delay={250}
                         isDynamic={true}
