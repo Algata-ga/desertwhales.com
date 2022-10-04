@@ -109,6 +109,13 @@ input:focus{
     color: #ca9e66 !important;
 }
 
+.lineTop {
+    width: 100%;
+    height: 1px;
+    background: white;
+    margin-bottom: 3rem;
+}
+
 .line {
     width: 100%;
     height: 1px;
@@ -137,7 +144,7 @@ input:focus{
     .quicklink,
     .company,
     .social {
-        justify-content: center;
+        justify-content: start !important;
     }
 
     .logo h6,
@@ -176,6 +183,14 @@ input:focus{
         font-size: 1.2rem;
     }
 
+}
+
+@media (min-width:768px){
+    .logo,
+        .quicklink,
+        .company{
+            justify-content: start !important;
+        }
 }
 
 @media (max-width:768px) {

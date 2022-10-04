@@ -40,6 +40,7 @@ const handleSubmit = async (e) => {
 const Footer = () => {
     return (
         <footer className={style.footerbg}>
+            <div className={style.lineTop}></div>
             <div className={style.footer}>
                 <div className={style.logo}>
                     <img src={logo} alt="" />
@@ -50,7 +51,7 @@ const Footer = () => {
                         <Link
                             spy={false}
                             smooth={true}
-                            offset={-50}
+                            offset={0}
                             duration={500}
                             delay={250}
                             isDynamic={true}
@@ -61,7 +62,7 @@ const Footer = () => {
                         <Link
                             spy={false}
                             smooth={true}
-                            offset={-50}
+                            offset={0}
                             duration={500}
                             delay={250}
                             isDynamic={true}
@@ -72,7 +73,7 @@ const Footer = () => {
                         <Link
                             spy={false}
                             smooth={true}
-                            offset={-50}
+                            offset={0}
                             duration={500}
                             delay={250}
                             isDynamic={true}
@@ -83,7 +84,7 @@ const Footer = () => {
                         <Link
                             spy={false}
                             smooth={true}
-                            offset={-50}
+                            offset={0}
                             duration={500}
                             delay={250}
                             isDynamic={true}
@@ -94,7 +95,7 @@ const Footer = () => {
                         <Link
                             spy={false}
                             smooth={true}
-                            offset={-50}
+                            offset={0}
                             duration={500}
                             delay={250}
                             isDynamic={true}
@@ -126,15 +127,15 @@ const Footer = () => {
                             duration={500}
                             delay={250}
                             isDynamic={true}
-                            to="About"
+                            to="Services"
                         >
-                            About
+                            Services
                         </Link>
 
                         <Link
                             spy={false}
                             smooth={true}
-                            offset={-125}
+                            offset={-100}
                             duration={500}
                             delay={250}
                             isDynamic={true}
@@ -145,7 +146,7 @@ const Footer = () => {
                         <Link
                             spy={false}
                             smooth={true}
-                            offset={-100}
+                            offset={-50}
                             duration={500}
                             delay={250}
                             isDynamic={true}
