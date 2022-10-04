@@ -63,10 +63,8 @@ function App() {
                 <Navbar />
                 <Section1 />
             </Element>
-            <Element name="About">
-                <Service />
-            </Element>
             <Element name="Services">
+                <Service />
                 <Cards />
             </Element>
             <KOIMap />
