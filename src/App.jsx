@@ -19,10 +19,10 @@ import { Transition, CSSTransition } from "react-transition-group";
 function App() {
     const isIdle = useIdle(5e3, true);
     const transitionStyles = {
-        entering: { opacity: 0 },
+        entering: { opacity: 0, zIndex: -1 },
         entered: { opacity: 1 },
         exiting: { opacity: 1 },
-        exited: { opacity: 0 },
+        exited: { opacity: 0,zIndex: -1 },
     };
 
     return (
