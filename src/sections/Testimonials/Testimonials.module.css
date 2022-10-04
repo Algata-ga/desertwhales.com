@@ -142,5 +142,6 @@
 @media (max-width:576px) {
     .slide {
         margin: 0 5px;
+    width: min(375px, 95%);
     }
 }
