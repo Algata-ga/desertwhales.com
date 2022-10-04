@@ -17,3 +17,8 @@
     justify-content: space-evenly;
 
 }
+@media screen and (max-width: 768px) {
+    .cards{
+        padding: 0rem 0 5rem 0;
+    }
+}
