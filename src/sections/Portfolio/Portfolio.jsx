@@ -10,6 +10,11 @@ import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 
 import { usePortfolios } from "../../queries";
 
+
+const mediaQueryList = window.matchMedia("only screen and (max-width: 576px)");
+
+const chunk_size = mediaQueryList.matches ? 8 : 9;
+
 const chunk = (arr, size) =>
     arr.reduce(
         (acc, _, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]),
@@ -58,7 +63,7 @@ const Portfolio = () => {
                         pagination={pagination}
                         modules={[Autoplay, EffectCoverflow, Pagination]}
                     >
-                        {chunk(portfolios.data, 9).map((slide, index) => (
+                        {chunk(portfolios.data, chunk_size).map((slide, index) => (
                             <SwiperSlide className={style.slide} key={index}>
                                 {slide.map((item, index) => (
                                     <div className={style.img} key={index}>
