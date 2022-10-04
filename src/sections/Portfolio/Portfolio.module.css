@@ -58,7 +58,7 @@
     margin: 15px;
     border-radius: 25px 25px 0 0;
     overflow: hidden;
-
+    margin-bottom: 20px;
 }
 
 .heading {
@@ -93,7 +93,6 @@
 
     .slide {
         grid-template-columns: repeat(2, minmax(7rem, 1fr));
-
     }
 
     .img {

@@ -16,8 +16,13 @@ const chunk = (arr, size) =>
         []
     );
 
+
+
 const Portfolio = () => {
     const portfolios = usePortfolios();
+    const pagination = {
+        clickable: true,
+    };
     return (
         <section className={style.folio}>
             <h1 className={style.heading}>Portfolio</h1>
@@ -41,8 +46,8 @@ const Portfolio = () => {
                         centeredSlides={true}
                         slidesPerView={"auto"}
                         autoplay={{
-                            delay: 3000,
-                            disableOnInteraction: false,
+                            delay: 10000,
+                            disableOnInteraction: true,
                         }}
                         coverflowEffect={{
                             rotate: 0,
@@ -50,13 +55,14 @@ const Portfolio = () => {
                             depth: 0,
                             modifier: 1,
                         }}
+                        pagination={pagination}
                         modules={[Autoplay, EffectCoverflow, Pagination]}
                     >
                         {chunk(portfolios.data, 9).map((slide, index) => (
                             <SwiperSlide className={style.slide} key={index}>
                                 {slide.map((item, index) => (
                                     <div className={style.img} key={index}>
-                                        <a className={style.a} href={item.link}>
+                                        <a className={style.a} href={item.link} target="blank">
                                             <img src={item.image} alt={item.name} />
                                         </a>
                                     </div>
