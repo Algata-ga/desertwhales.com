@@ -6,6 +6,11 @@ import { ContactPopUp } from "../../components";
 import Particles from "react-tsparticles";
 import options from "./particlesConfig.js";
 import { useToggle } from "react-use";
+
+const mediaQueryList = window.matchMedia("only screen and (max-height: 650px)");
+
+const top = mediaQueryList.matches ? 70 : 100;
+
 const Section1 = () => {
     const particlesInit = (main) => {
         return null;
@@ -20,6 +25,7 @@ const Section1 = () => {
             <div className={style.lines}>
                 <img src={linebg} alt="" />
             </div>
+            <div className={style.space}></div>
             <section className={style.section1}>
                 <Container className={style.main}>
                     <div className={style.content}>
@@ -63,7 +69,7 @@ const Section1 = () => {
                 width="100%"
                 height="max(866px, 100vh)"
                 options={options}
-                style={{ top: "100px", zIndex: "-1", position: "absolute" }}
+                style={{ top: top, zIndex: "-1", position: "absolute" }}
             />
         </>
     );
